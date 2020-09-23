@@ -273,7 +273,9 @@ body{
     height: 123px;
     background: #FFC047;
 }
-
+.text {
+    background-color: #F1F5F7;
+}
 
 .button {
     font-size: 14px;
