@@ -3,7 +3,6 @@
 }
 body{
     font-family: 'cuprumregular', PT Sans, sans-serif;
-    margin: 0 auto;
     }
 .container{
     width: 940px;
@@ -379,13 +378,21 @@ body{
     text-decoration: line-through;
 }
 .price-button {
+    position: relative;
+    content: "";
     font-weight: bold;
     color: #ffffff;
     background: #ee3643;
     padding: 10px 10px 10px 15px;
-    border-radius: 6px 50px 50px 6px;
+    border-radius: 6px 6px;
     padding: 10px 42px 10px 30px;
     margin-bottom: 21px;
+}
+.price-button::after {
+    color: red;
+}
+.price-button::before {
+    color: red;
 }
 
 .catalog-item .action{
