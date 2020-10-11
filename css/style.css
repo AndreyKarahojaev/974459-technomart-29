@@ -2,182 +2,212 @@
     box-sizing: border-box;
 }
 .wrapper{
-    font-family: 'cuprumregular', PT Sans, sans-serif;
+    font-family: 'cuprum', PT Sans, sans-serif;
+    font-size: 18px;
     }
 .container{
     width: 100%;
     max-width: 940px;
     margin: 0 auto;
 }
-.flex { display: flex;}
+/* Общие классы стилизации */
+/* Выравнивание */
+.flex { display: flex;} 
 .justify-center {justify-content: center;}
 .items-center {align-items: center;}
+.flex-wrap { flex-wrap: wrap;}
+.height-full { height: 100%;}
+/* внешний вид */
+.list-unstyled { list-style: none; padding: 0; margin: 0; }
 
-
-/* FOOTER */
 .page-header {
     min-width:  100%;
     min-height:  320px;
     background: #F1F5F7;
 }
 .header-top {
-    display: flex;
-    font-size: 18px;
-    line-height: 24px;
     color: #ffffff;
     margin: 0 auto;
     width: 100%;
-    height: 42px; /* костыль */
+    height: 42px;
     background: #293449;
+    margin-bottom: 45px;
 }
-.nav-info-header {
-    padding: 45px 0 45px 0;
-}
+/* 
+Логотип 
+*/
 .header-logo {
     flex-basis: 220px;
-    height: 100%;
-    text-transform:uppercase;
+}
+.header-logo-link {
     background: #EE3643;
+    height: 47px;
+    position: relative;
     box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+    width: 100%;
 }
-.header-logo:hover{
-    background: #ca2c37;
-    box-shadow: 0 -5px 0 0 #9a212a;
+.header-logo-link:active {
+    background: #BA2732;
 }
-.header-logo:active{
-    background: #ba2732;
-    box-shadow: 0 -5px 0 0 #8e1e26;
+.header-logo-img {
+    position: relative;
+    left: -1px;
+    top: -2px;
 }
+/* 
+Поиск
+ */
 .header-search {
-    display: grow;
-    width: 270px;
-    height: 46px;
-    cursor: pointer;
+    flex-grow: 1;
+    padding: 0  0 0 15px;
+    color: #000000;
 }
+::-webkit-input-placeholder {
+    color: #FFFFFF;
+}
+.header-search-icon {
+    margin-right: 5px;
+    opacity: .3;
+}
+.header-search-input {
+    background: transparent;
+    color: #000000;
+    outline: none;
+    border: 0;
+    font-size: 1rem;
+    max-width: 150px;
+}
+.header-search-active:hover img { opacity: 1;}
+.header-search-active:active { background-color: #FFFFFF;}
+.header-search-active:active img { background-image: url(../img/icon-search-active.svg)}
+/* 
+Блок покупки 
+*/
 .users {
-    display: flex;
+    flex-basis: 450px;
+    font-size: 1.125rem;
+}
+.users-link {
+    color: #fff;
+    width: 150px;
     text-decoration: none;
 }
-.users a{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
+.users-text,
+.users-icon {
+    position: relative;
+}
+.users-text {
     line-height: 24px;
-    text-decoration: none;
-    color: #ffffff;
+    left: -2px;
 }
-.user-bookmarks{
-    width: 150px;
+.users-item:nth-child(2) .users-text { left: -1px; }
+.users-item:nth-child(2) .users-icon { left: 1px; }
+.users-item:nth-child(3) .users-text { left: 1px; }
+
+.users-icon {
+    margin-right: 9px;
+    left: -1px;
+    opacity: .3;
 }
-.user-cart {
-    width: 150px;
+.users-link:hover .users-icon {
+    opacity: 1;
 }
+.user-bookmarks:active { background: #161D29;opacity: 0.5;}
+.user-cart:active {opacity: 0.5;}
+
 .user-order {
-    width: 150px;
     background: #63A63E;
 }
-.user-bookmarks:hover {
-    background: #161D29;
-    color: rgba(255, 255, 255, 0.5);
-}
-.user-cart:hover {
-    background: #161D29;
-    color: rgba(255, 255, 255, 0.5);
-}
-.user-order{
-    width: 150px;
-    height: 42px;
-}
 .user-order:hover {
-    color: rgba(255, 255, 255, 0.5);
+    color: #FFFFFF;
     background: #5FBB2D;
 }
-.info-header {
-    display: flex;
-	justify-content: space-between;
-	align-items: center;
+.user-order:active {
+    color: rgba(255, 255, 255, 0.5);
+    background: #63A63E;
 }
-.info-header span  {
-    font-family: Cuprum;
+
+/* Блок пользователя */
+.info-header {
+	justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+.info-text  {
     font-style: italic;
-    width: 207px;
-    font-size: 16px;
+    font-size: 1.125rem;
     line-height: 23px;
     color: #EE3643;
+    padding: 0;
+    margin: 0;
+    padding-left: 30px;
 }
-.info-tel a{
-    text-decoration: none;
-    color: #EE3643; 
-}
-.info-tel p{
+.info-tel-block .info-text-sity {
+    font-size: 0.875rem;
+    line-height: 24px;
+    color: #32425C;
+    padding: 0;
     margin: 0;
 }
-.tel {
-    display: flex;
-    justify-content: center;
-	align-items: center;
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 21px;
+/* .info-tel-block .info-text-sity {padding-top: 19px;} */
+
+.info-tel a{text-decoration: none; color: #EE3643;}
+
+.info-tel{
+    font-size: 1.3122rem;
     line-height: 30px;
-    padding: 6px 0px 6px 0px;
     background: #F3F7F9;
     border: 3px solid #FFFFFF;
     box-sizing: border-box;
+    padding: 9px 35px 9px 40px;
+    /* margin-bottom: -14px; */
 }
-.info-header p {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    color: #32425C;
-}
-.user-login,.user-registration {
+
+/* Блок юзера */
+
+.user-block {
+    justify-content: space-between;
     align-items: flex-start;
-    font-family: Cuprum;
-    font-size: 21px;
+    font-size: 1.3125rem;
     line-height: 21px;
+    /* margin-left: -15px;
+    padding-left: 35px; */
+}
+
+.user-block img { opacity: 0.5;}
+.user-block:hover img { opacity: 1;}
+.user-block:active img { opacity: 0.5;}
+.user-block a { 
     text-decoration: none;
     color: black;
-    /* background: rgba(0, 0, 0, 0.01); */
 }
-.user-login {
-    padding: 12px 45px 12px 27px ;
-    margin-left: 10px;
+.user-registration { 
+    padding: 12px 24px 12px 24px; 
+    margin-left:10px;
+    background-color:#FFFFFF;
 }
-.user-registration {
-    padding: 19px 12px 27px 12px ;
-    margin-left: 10px;
+.user-login { 
+    padding: 12px 27px 12px 19px;
+    background-color:#FFFFFF;
+
 }
-.user-registration:hover{
+.user-registration a:hover{
     color: #ee3643;
 }
-.user-registration:active{
+.user-registration a:active{
     color: #c5c5c5;
 }
-.user-login:hover{
+.user-login a:hover{
     color: #ee3643
 }
-.user-login:active{
+.user-login a:active{
     color: #c5c5c5
 }
-.nav-header section {
-    margin: 0 auto 60px;
-}
+
+/* Блок навигации */
 .header-navigaion-site {
-    display: flex;
     flex-wrap: wrap;
-    min-height: 60px;
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 24px;
     background: #32425C;
     box-shadow: inset 0px -5px 0px #293449;
@@ -185,9 +215,9 @@
 .header-navigaion-site ul{
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
     justify-content: space-between;
-    font-size: 18px;
+    list-style: none;
+    font-size: 1/125rem;
     line-height: 24px;
     padding: 0;
     margin: 0;
