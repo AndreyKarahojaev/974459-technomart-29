@@ -358,31 +358,28 @@
 
 .popular-section-title {
     font-family: Cuprum;
-    font-size: 30px;
+    font-size: 1.875rem;
     margin-left: 30px;
     text-transform: uppercase;
     color: var(--basik-grey); 
 }
 .popular-title {
-    display: flex;
 	justify-content: space-between;
-    align-items: center;
     background: #F9F5F0; 
 }
 .popular-button {
-    margin-right: 20px;
+    padding: 11px 24px 9px 24px;
+    margin-right: 14px;
 }
 .popular-catalog-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    /* gap: 20px; */
+    gap: 20px;
     list-style-type:none;
-    margin: 20px 0 0 0;
     padding: 0;
 }
 .catalog-item {
-    min-width: 220px;
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
 }
@@ -391,29 +388,26 @@
 }
 .item-name {
     font-family: PT Sans;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 20px;
     text-align: center;
 }
 .basket-info {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0;
-}
-.basket-info h3 {
-    margin: 0 auto;
-    padding: 0;
 }
 .catalog-price {
+    margin-top: 5px;
+    font-size: 1.0625rem;
+    line-height: 18px;
     font-weight: bold;
     color: #999999;
-    text-align: center;
-    background: none;
     text-decoration: line-through;
 }
+/* КОСТЫЛЬ */
+.catalog-price-hidden {
+    margin-top: 20px;   
+}
+/* КОСТЫЛЬ */
 .price-button {
     position: relative;
     content: "";
@@ -425,12 +419,16 @@
     padding: 10px 42px 10px 30px;
     margin-bottom: 21px;
 }
-/* .price-button::after {
-    color: red;
+.price-button::after {
+    position: absolute;
+    left: 127px;
+    top: 0px;
+    content: '';
+    border-style: solid;
+    border-width: 20px;
+    border-color: transparent;
+    border-left-color: var(--basik-red);
 }
-.price-button::before {
-    color: red;
-} */
 
 .catalog-item .action{
     position: relative;
@@ -878,8 +876,6 @@
     text-decoration: none;
     color: var(--basik-white);
     background: var(--basik-red);
-    padding: 10px 45px;
-    cursor: pointer;
 }
 .button:hover{
     background: var(--special-red);
