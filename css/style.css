@@ -269,7 +269,7 @@
                         "slider slider delivery";
     grid-template-columns: repeat(3, 300px);
     grid-template-rows: repeat(3, 123px);
-    margin-top: 59px;
+    margin-top: 58px;
     margin-bottom: 59px;
 }   
 .materials:nth-child(1) { 
@@ -288,81 +288,70 @@
     grid-area: slider;
 }
 .materials {
+    position: relative;
     background: var(--special-ylellow);
     background-image: url("../img/icon-materials.svg");
     background-repeat: no-repeat;
-    background-position: 85% 60%;
+    background-position: 83% 55%;
 }
 .tools { 
     background: var(--special-blue);
     background-image: url("../img/icon-tools.svg");
     background-repeat: no-repeat;
-    background-position: 85% 60%;
+    background-position: 87% 55%;
 }
 .tech{ 
     background: var(--special-lilac);
     background-image: url("../img/icon-tech.svg");
     background-repeat: no-repeat;
-    background-position: 85% 60%;
+    background-position: 87% 55%;
 }
 .slider { 
     background: red;
 }
 .discount { 
-    width: 300px;
-    height: 123px;
     background: var(--special-greenlight);
     background-image: url("../img/icon-discount.svg");
     background-repeat: no-repeat;
-    background-position: 85% 60%;
+    background-position: 82% 55%;
 }
 .delivery { 
-    width: 300px;
-    height: 123px;
     background: #FFC047;
     background-image: url("../img/icon-delivery.svg");
     background-repeat: no-repeat;
-    background-position: 85% 60%;
+    background-position: 87% 55%;
 }
-.features-catalog p {   
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    color: var(--basik-white);
-    margin-left: 23px;
-    margin-bottom: 14px; 
-}
-.features-catalog a {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
+.features-catalog p { 
+    display: flex; 
     text-align: center;
-    justify-content: space-around;
-    text-transform: uppercase;
+    align-items: center; 
+    font-size: 1.5rem;
+    line-height: 30px;
     color: var(--basik-white);
-    margin-left: 23px;  
+    margin-left: 25px;
+    margin-bottom: 17px;
     
 }
+.features-catalog a {
+    font-size: 0.875rem;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basik-white);
+    margin-left: 25px;  
+}
 .features-menu-btn {
-    width: 135px;
-    height: 38px;
-    position: absolute;
+    padding: 10px 24px;
     background: rgba(255, 255, 255, 0.3);
-    mix-blend-mode: normal;
 }
 .features-menu-btn:hover{
-    background: rgba(0, 0, 0, 0.2);
+    background: #C5C5C5;
+    mix-blend-mode: normal;
+    opacity: 0.3;
 }
 .features-menu-btn:active{
-    background: rgba(0, 0, 0, 0.3);
+    background: #A9A9A9;
+    mix-blend-mode: normal;
+    opacity: 0.3;
 }
 
 /* Популярные товары */
