@@ -429,6 +429,16 @@
     border-color: transparent;
     border-left-color: var(--basik-red);
 }
+/* .price-button::before {
+    position: absolute;
+    left: 124px;
+    top: 0px;
+    content: '';
+    border-style: solid;
+    border-width: 20px;
+    border-color: transparent;
+    border-left-color: var(--basik-red);
+} */
 
 .catalog-item .action{
     position: relative;
@@ -441,13 +451,16 @@
 .do-shopping {
     color: var(--basik-white);
 }
+.cart {
+    padding: 20px;
+    background-color: red;
+    background-image: url(../img/icon-cart.svg) no-repeat;
+}
 .catalog-item .buy,
 .catalog-item .bookmark {
     display: block;
-    font-family: 'Cuprum', sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 18px;
-    font-weight: normal;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -481,7 +494,6 @@
 .catalog-item .bookmark:active{
     opacity: 0.5;
 }
-
 .catalog-item .do-shopping{
     color: var(--basik-white);
     margin-left: -20px;
@@ -496,6 +508,7 @@
 .catalog-item:hover img{
     display: none;
 }
+/* Блок svg новинка */
 .corner-ribbon-materials{
     position: absolute;
     margin-left: 230px;
@@ -510,8 +523,12 @@
     width: 59px;
     height: 59px;
 }
+/* Блок svg новинка */
+/* 
+Блок популярных брендов
+ */
 .popular-brands {
-    margin-top: 70px;
+    margin-top: 50px;
 }
 .popular-brands-list {
     display: grid;
@@ -523,15 +540,14 @@
     padding: 0;
 }
 .popular-list-item {
-    display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center; 
     width: 220px;
+    height: 145px;
     background: var(--basik-white);
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
 }
+.popular-brands .popular-button { padding: 11px 39px 9px 39px;}
 
 .popular-list-item:hover{
     box-shadow: 0 8px 25px 5px #c0c0c0;
@@ -548,52 +564,39 @@
     background: var(--basic-background);
 }
 .services-block-title {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+    margin-top: 45px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
 	justify-content: space-between;
     align-items: baseline;
 }
-
 .services-title {
     width: 100%;
+    margin-bottom: 65px;
 }
+
 .services-block-title h2 {
-    font-family: Cuprum;
-    font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 30px;
     text-transform: uppercase;
 }
+
 .services-text {
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 24px;
 }
-.services-info {
-    width: 240px;
-    height: 190px;
-}
-.services-info .services-botton {
-    display: flex;
+.services-list .services-botton {
 	flex-direction: column;
-	flex-wrap: wrap;
 	align-items: flex-start;
-    font-family: Cuprum;
-    font-style: normal;
     font-weight: bold;
-    font-size: 21px;
+    font-size: 1.3125rem;
     line-height: 30px;
     padding: 14px 139px 18px 22px;
 }
 .services-botton {
-    font-family: Cuprum;
-    font-style: normal;
     font-weight: bold;
-    font-size: 21px;
+    font-size: 1.3125rem;
     line-height: 30px;
     min-width: 240px;
     color: var(--basik-white);
@@ -616,30 +619,29 @@
     box-shadow: 0px 1px 0px var(--basik-white);
     outline: none;
 }
-.services-block-slide {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content:center;
-	align-items: center;
-	align-content: center;
-}
-
-.services-block-title img{
+.services-block-slide { 
     position: absolute;
 }
+.description { 
+    top: 170px;
+    position: absolute;
+    left: 322px;
+}
+.services-block-slide img{
+    position: relative;
+    top: 205px;
+    left: 472px;
+}
 .services-block-slide p{
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
+    width: 300px;
+	flex-direction: column;
+    font-size: 0.8125rem;
     line-height: 24px;
 }
-.services-garant,
-.service-credit {
+.service-slide-credit,
+.service-slide-garant {
     display: none;
 }
-
 /* Дополнительная информация */
 .aside-company {
     display: flex;
