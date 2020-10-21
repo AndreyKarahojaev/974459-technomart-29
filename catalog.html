@@ -5,6 +5,7 @@
   <title>HTML Academy: Техномарт</title>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -87,20 +88,95 @@
     <!-- main основные разделы сайта -->
   <main class="main flex ">
     <!-- хлебные крошки -->
-    <div class="bread_crumb container flex items-center ">
-      <p>Каталог</p>
+    <div class="catalog-title container flex items-center ">
+      <ul class="breadcrumbs flex list-unstyled">
+        <div class="icon-home">
+          <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 7.99999V12H6V7.99999H8V12H12V7.99999L7 3.51599L2 7.99999Z" fill="#C1C6CE"/>
+          <path d="M13.831 6.365L12 4.751V0H9.99998V2.987L7.33198 0.635C7.31198 0.618 7.28898 0.612 7.26798 0.598C7.24294 0.579705 7.21614 0.56396 7.18798 0.551C7.15708 0.540195 7.12529 0.532163 7.09298 0.527C7.06198 0.521 7.03198 0.515 6.99998 0.515C6.96898 0.515 6.93898 0.521 6.90798 0.527C6.87551 0.531919 6.84366 0.5403 6.81298 0.552C6.78498 0.563 6.75998 0.581 6.73298 0.598C6.71198 0.612 6.68798 0.618 6.66898 0.635L0.170976 6.365C0.0162401 6.50291 -0.0375953 6.72187 0.0355474 6.9158C0.10869 7.10974 0.293707 7.23862 0.500976 7.24C0.622907 7.24035 0.740711 7.19586 0.831976 7.115L6.99998 1.677L13.169 7.115C13.3778 7.27913 13.6784 7.25178 13.8542 7.05265C14.0299 6.85352 14.0198 6.55183 13.831 6.365Z" fill="#C1C6CE"/>
+          </svg>
+        </div>
+        <li>
+          <a href="index.html">Каталог</a>
+        </li>
+        <li>
+          <a href="catalog.html">Инструменты</a>
+        </li>
+        <li class="breadcrumbs-current">
+          <a href="#">перфораторы</a>
+        </li>
+      </ul>
     </div>
     <div class="Product container">
-      <h2>Перфораторы:</h2>
+      <h2>Перфораторы</h2>
     </div>
-    <div class="content container flex ">
+    <div class="container flex ">
       <section class="filtres height-full">
         <h3>Фильтр</h3>
-        <p>наполнение</p>
+        <div class="content-left">
+          <div class="content-left-title">
+              <h2>Цена:</h2>
+          </div>
+            <div class="content-left-filter">
+                <div class="range-filter">
+                    <div class="range-controls">
+                        <div class="scale"><div style="width:70%" class="bar"></div></div>
+                        <div class="toggle min-toggle"></div>
+                        <div class="toggle max-toggle"></div>
+                    </div>
+                    <div class="price-controls">
+                        <input class="min-price" type="text" value="0"> —
+                        <input class="max-price" type="text" value="30 000">
+                    </div>
+                </div>
+            </div>
+          <div class="content-left-filter">
+              <div class="content-left-title">
+                  <h2>Производители:</h2>
+              </div>
+              <ul class="filter-search">
+                <li class="btn-filter-checkbox">
+                  <input type="checkbox" name="remember" id="remember-1"><label for="remember-1">BOSH</label>
+                </li>
+                <li class="btn-filter-checkbox">
+                  <input type="checkbox" name="remember" id="remember-2"><label for="remember-2">ИНТЕРСКОЛ</label>
+                </li>
+                <li class="btn-filter-checkbox">
+                  <input type="checkbox" name="remember" id="remember-3"><label for="remember-3">MAKITA</label>
+                </li>
+                <li class="btn-filter-checkbox">
+                  <input type="checkbox" name="remember" id="remember-4"><label for="remember-4">DEWALT</label>
+                </li>
+                <li class="btn-filter-checkbox">
+                  <input type="checkbox" name="remember" id="remember-5"><label for="remember-5">HITACHI</label>
+                </li>
+              </ul>
+          </div>
+          <div class="content-left-title">
+              <h2>Питание:</h2>
+          </div>
+          <ul class="filter-search">
+            <li class="btn-filter-radio">
+              <input type="radio" name="remember" id="remember-6"><label for="remember-6">Аккумуляторные</label>
+            </li>
+            <li class="btn-filter-radio">
+              <input type="radio" name="remember" id="remember-7"><label for="remember-7">Сетевые</label>
+            </li>
+          </ul>
+      </div>
       </section>
         <!-- Секция товары -->
       <section class="popular-products container">
-            <div class="collating"><h3>Сортировка</h3></div>
+        <div class="content-right-filter flex">
+          <h3>Сортировать:</h3>
+              <a class="active" href="">По цене</a>
+              <a href="">По типу</a>
+              <a href="">По функционалу</a>
+              <div class="filter-btn">
+                  <a class="filter-btn-top"></a>
+                  <a class="filter-btn-bottom"></a>
+              </div>
+      </div>
             <ul class="catalog-list">
               <li class="catalog-item">
                 <img src="img/item-1.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
@@ -220,11 +296,16 @@
                 </div>
               </li>
             </ul>
+            <div class="paginator">
+              <a class="active" href="#1">1</a>
+              <a  href="#2">2</a>
+              <a href="#3">3</a>
+              <a href="#4">Следующая</a>
+          </div>
         </section>
     </div>
-    <div class="bread_crumb-bottum container flex">
-      1 2 3
-    </div>
+    
+
         <!-- Дополнительная инфомрация -->
       <section class="aside">
           <div class="aside-product container">
