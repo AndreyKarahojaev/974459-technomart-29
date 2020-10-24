@@ -585,7 +585,7 @@
 /* Сервис */
 .services {
     position: relative;
-    margin-top: 70px;
+    margin-top: 90px;
     width: 100%;
     background: var(--basic-background);
 }
@@ -599,17 +599,17 @@
 }
 .services-title {
     width: 100%;
-    margin-bottom: 55px;
+    margin-bottom: 72px;
 }
 .row-services {
     position: relative;
 }
 .shadow-servis{
     position: absolute;
-    top: 147px;
+    top: 176px;
     width: 10px;
     height: 279px;
-    left: 231px;
+    left: 520px;
     background-image: url(../img/box-shadow-servis.svg);
     z-index: 1;
 }
@@ -623,6 +623,7 @@
 .services-text {
     font-size: 0.8125rem;
     line-height: 24px;
+    padding-top: 25px;
 }
 /* Сервис кнопки */
 .services-botton {
@@ -667,7 +668,7 @@
 }
 .services-block-slide img{
     position: relative;
-    top: 311px;
+    top: 298px;
     left: 681px;
 }
 .services-block-slide p{
@@ -676,7 +677,7 @@
 	flex-direction: column;
     font-size: 0.77rem;
     line-height: 24px;
-    top: 72px;    
+    top: 65px;   
 }
 .service-slide-credit,
 .service-slide-garant {
@@ -684,7 +685,7 @@
 }
 
 /* Дополнительная информация */
-.aside-information{padding-top: 45px;}
+.aside-information{padding-top: 67px;}
 
 .aside-company {
 	flex-direction: row;
