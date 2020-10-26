@@ -335,7 +335,7 @@
     background-position: 87% 55%;
 }
 .slider { 
-    background: red;
+    box-shadow: 0px 104px 0px 0px rgba(10, 11, 11, 0.25) inset;
 }
 .discount { 
     background: var(--special-greenlight);
@@ -382,7 +382,12 @@
 .features-menu-btn:active{
     background: rgba(169, 169, 169, 0.3);
 }
-
+/* Слайдер */
+.slider-wrapper {background-image: url(../img/Dreli-slide.png); }
+.slide-1{
+    
+}
+/* Слайдер */
 /* Популярные товары */
 .popular-products {margin-top: 5px; padding-bottom: 5px;}
 .popular-section-title {
@@ -392,7 +397,7 @@
     color: var(--basik-grey);
 }
 .popular-title {
-    padding: 23px 2px 23px 0px;
+    padding: 24px 4px 24px 0px;
 	justify-content: space-between;
     background: #F9F5F0;
 }
@@ -542,15 +547,14 @@ min-height 164 */
 }
 
 /* Блок svg новинка */
-.corner-ribbon-materials{
-    position: absolute;
-    right: 0;
-    top: 0px;
-}
 .corner-ribbon{
     position: absolute;
     right: 0;
     top: 0px;
+    padding: 35px;
+    z-index: 2;
+    background-image: url(../img/corner-ribbon.svg);
+    background-repeat: no-repeat;
 }
 /* Блок svg новинка */
 /* 
@@ -585,26 +589,22 @@ min-height 164 */
 
 /* Сервис */
 .services {
-    position: relative;
-    margin-top: 90px;
+    padding-top: 90px;
     width: 100%;
     background: var(--basic-background);
 }
 .services-block-title {
-    position: relative;
     margin-top: 45px;
-    margin-bottom: 100px;
     flex-wrap: wrap;
-	justify-content: space-between;
-    align-items: baseline;
 }
 .services-title {
     width: 100%;
     margin-bottom: 72px;
 }
-
+/* Полоска тени у кнопок */
 .row-services {
     position: relative;
+    bottom: 47px;
 }
 .shadow-servis{
     position: absolute;
@@ -615,8 +615,13 @@ min-height 164 */
     background-image: url(../img/box-shadow-servis.svg);
     z-index: 1;
 }
-
-.services-block-title h2 {
+/* Полоска тени у кнопок */
+.services-block-slide p{
+    font-family: PT Sans;
+    font-size: 0.77rem;
+    line-height: 24px;
+}
+.services-block-title h2{
     font-weight: normal;
     font-size: 1.875rem;
     line-height: 30px;
@@ -645,42 +650,64 @@ min-height 164 */
 }
 .services-botton:hover {
     color: var(--basik-white);
-    transition-duration: 0.2s;
     background: var(--basik-greydark);
-    box-shadow: 0px 1px 0px var(--basik-greydark), inset 0px 1px 0px #405069; 
+    box-shadow: 0px 1px 0px var(--basik-greydark), inset 0px 1px 0px #405069;
+    transition-duration: 0.2s; 
     outline: none;
 }
 .services-botton:active {
     color: var(--basik-grey);
-    transition-duration: 0.2s;
     background: var(--basik-white);
     box-shadow: 0px 1px 0px var(--basik-white);
+    transition-duration: 0.2s;
     outline: none;
 }
 /* Блок - сервис слайды */
-.services-block-slide { 
-    width: 50px;
-    height: 50px;
-    position: absolute;
+.services-block-slide  {
+    position: relative;
 }
 .description {
-    position: absolute; 
-    top: 166px;
-    left: 321px;
-}
-.services-block-slide img{
     position: relative;
-    top: 298px;
-    left: 681px;
+    top: 3px;
+    left: 80px;
 }
-.services-block-slide p{
-    position: absolute;
-    min-width: 300px;
-	flex-direction: column;
-    font-size: 0.77rem;
+
+.service-slide-delivery {
+    min-width: 705px;
+    min-height: 285px;
+    background-image: url(../img/services-delivery.png);
+    background-repeat: no-repeat;
+    background-position: 231px 24px;
+}
+.service-slide-credit{
+    min-width: 620px;
+    min-height: 285px;
+    background-image: url(../img/services-delivery.png);
+    background-repeat: no-repeat;
+    background-position: 231px 24px;
+}
+.service-slide-garant{
+    min-width: 620px;
+    min-height: 285px;
+    background-image: url(../img/services-delivery.png);
+    background-repeat: no-repeat;
+    background-position: 231px 24px;
+}
+.description h2 {
+    font-family: Cuprum;
+    font-size: 1.7rem;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #32425C;
+}
+.description p {
+    font-family: PT Sans;
+    font-size: 0.72rem;
     line-height: 24px;
-    top: 65px;   
+    color: #000000;
+    padding-top: 20px;
 }
+
 .service-slide-credit,
 .service-slide-garant {
     display: none;

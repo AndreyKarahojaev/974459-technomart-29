@@ -89,17 +89,10 @@
     <main class="main flex items-center">
       <!-- Секция преимущества -->
       <section class="features container">
+        <h2 class="visually-hidden">Преимущества</h2>
         <ul class="features-catalog">
-          <h2 class="visually-hidden">Преимущества</h2>
           <li class="materials">
-            <div class="corner-ribbon-materials corner-ribbon-new">
-              <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="22.2133" y="-23" width="100" height="30" transform="rotate(45 22.2133 -23)" fill="#EE3643" />
-                  <path
-                    d="M34.4527 19.1096L41.3823 12.1799L42.3723 13.1699L39.5014 20.0995L39.5509 20.149L44.4512 15.2488L45.3421 16.1397L38.4125 23.0694L37.4225 22.0794L40.2934 15.1498L40.2439 15.1003L35.3436 20.0005L34.4527 19.1096ZM39.7988 24.4557L46.7284 17.526L50.0943 20.8919L49.4013 21.5848L46.9264 19.1099L44.6496 21.3868L46.8274 23.5647L46.1345 24.2577L43.9566 22.0798L41.3827 24.6537L43.8576 27.1285L43.1646 27.8215L39.7988 24.4557ZM44.899 29.5558L50.6902 21.4878L51.5811 22.3787L47.1264 28.6154L47.1759 28.6649L52.3236 25.695L53.2145 26.586L50.2447 31.7337L50.2942 31.7832L56.5309 27.3285L57.4218 28.2194L49.3537 34.0106L48.2648 32.9217L51.3039 27.6452L51.2643 27.6056L45.9879 30.6448L44.899 29.5558Z"
-                    fill="white" />
-              </svg>
-            </div>
+            <div class="corner-ribbon"></div>
             <p>Материалы</p>
             <a class="features-menu-btn" href="#">На любой вкус</a>
           </li>
@@ -111,7 +104,26 @@
             <p>Техника</p>
             <a class="features-menu-btn" href="#">Для стройки</a>
           </li>
-          <li class="slider"> slaider
+          <li class="slider">
+            <div class="slider-wrapper">
+              <ul class="slider-list">
+                <li class="slider-item slide">
+                  <div class="slide-1">
+                    <h2 class="slide-title">Перфораторы</h2>
+                    <p>Настоящие муржские игрушки</p>
+                    <a class="slide-button" href="#">111</a>
+                  </div>
+                </li>
+                <li class="slider-item slide">
+                  <div class="slide-2 visually-hidden">
+                    <h2 class="slide-title ">Дрели</h2>
+                    <p>Соседям на радость</p>
+                    <a class="slide-button" href="#"></a>
+                  </div>
+                </li>
+                <a class="button popular-button" href="#">Открыть каталог</a>
+              </ul>
+            </div>
           </li>
           <li class="discount">
             <p>Скидка 50%</p>
@@ -146,15 +158,7 @@
               </div>
             </li>
             <li class="catalog-item">
-              <div class="corner-ribbon corner-ribbon-new">
-                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="22.2133" y="-23" width="100" height="30" transform="rotate(45 22.2133 -23)"
-                      fill="#EE3643" />
-                    <path
-                      d="M34.4527 19.1096L41.3823 12.1799L42.3723 13.1699L39.5014 20.0995L39.5509 20.149L44.4512 15.2488L45.3421 16.1397L38.4125 23.0694L37.4225 22.0794L40.2934 15.1498L40.2439 15.1003L35.3436 20.0005L34.4527 19.1096ZM39.7988 24.4557L46.7284 17.526L50.0943 20.8919L49.4013 21.5848L46.9264 19.1099L44.6496 21.3868L46.8274 23.5647L46.1345 24.2577L43.9566 22.0798L41.3827 24.6537L43.8576 27.1285L43.1646 27.8215L39.7988 24.4557ZM44.899 29.5558L50.6902 21.4878L51.5811 22.3787L47.1264 28.6154L47.1759 28.6649L52.3236 25.695L53.2145 26.586L50.2447 31.7337L50.2942 31.7832L56.5309 27.3285L57.4218 28.2194L49.3537 34.0106L48.2648 32.9217L51.3039 27.6452L51.2643 27.6056L45.9879 30.6448L44.899 29.5558Z"
-                      fill="white" />
-                </svg>
-              </div>
+              <div class="corner-ribbon"></div>
               <div class="catalog-item-gallery flex items-center justify-center">
                 <img src="img/item-2.jpg" alt="Перфоратор BOSCH BFG 3000" style="max-width: 184px; max-height: 164px;">
               </div>
@@ -185,16 +189,8 @@
               </div>
             </li>
             <li class="catalog-item">
-              <div class="corner-ribbon">
-                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="22.2133" y="-23" width="100" height="30" transform="rotate(45 22.2133 -23)"
-                      fill="#EE3643" />
-                    <path
-                      d="M34.4527 19.1096L41.3823 12.1799L42.3723 13.1699L39.5014 20.0995L39.5509 20.149L44.4512 15.2488L45.3421 16.1397L38.4125 23.0694L37.4225 22.0794L40.2934 15.1498L40.2439 15.1003L35.3436 20.0005L34.4527 19.1096ZM39.7988 24.4557L46.7284 17.526L50.0943 20.8919L49.4013 21.5848L46.9264 19.1099L44.6496 21.3868L46.8274 23.5647L46.1345 24.2577L43.9566 22.0798L41.3827 24.6537L43.8576 27.1285L43.1646 27.8215L39.7988 24.4557ZM44.899 29.5558L50.6902 21.4878L51.5811 22.3787L47.1264 28.6154L47.1759 28.6649L52.3236 25.695L53.2145 26.586L50.2447 31.7337L50.2942 31.7832L56.5309 27.3285L57.4218 28.2194L49.3537 34.0106L48.2648 32.9217L51.3039 27.6452L51.2643 27.6056L45.9879 30.6448L44.899 29.5558Z"
-                      fill="white" />
-                </svg>
-              </div>
-              <div class="catalog-item-gallery flex items-center justify-center">
+              <div class="corner-ribbon"></div>
+              <div class="catalog-item-gallery-2 flex items-center justify-center">
                 <img src="img/item-4.jpg" alt="Перфоратор BOSCH BFG 2000" style="max-width: 184px; max-height: 164px;">
               </div>
               <div class="action">
@@ -263,20 +259,19 @@
       </section>
       <!-- секция сервис -->
       <section class="services">
-        
         <div class="services-block-title container flex">
           <div class="services-title">
             <h2>Сервисы</h2>
             <p class="services-text">Хороший интернет-магазин отличается от плохого не только ценами!
               <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           </div>
-          <div class="row-services">
+          <div class="services-block-slide flex items-center">
+            <div class="row-services">
               <div class="shadow-servis"></div>
               <button class="services-botton flex">Доставка</button>
               <button class="services-botton flex">Гарантия</button>
               <button class="services-botton flex">Кредит</button>
           </div>
-          <div class="services-block-slide flex items-center justify-center">
             <div class="service-slide-delivery">
               <div class="description">
                 <h2>Доставка</h2>
@@ -285,8 +280,8 @@
                   <br> Ведь мы неплохо заработаем,
                   <br> поднимая его на ваш на этаж!
                 </p>
+                <img class="visually-hidden" src="img/services-delivery.png" width="468" height="261" alt="Доставка">
               </div>
-              <img src="img/services-delivery.png" width="468" height="261" alt="Доставка">
             </div>
             <div class="service-slide-garant">
               <div class="description">
@@ -296,15 +291,15 @@
                   <br> гарантии. Мы обменяем сгоревший товар на новый. 
                   <br> Дом уж восстановите как-нибудь сами.
                 </p>
+                <img class="visually-hidden" src="img/services-garant.png" width="389" height="283" alt="Гарантия">
               </div>
-              <img src="img/services-garant.png" width="389" height="283" alt="Гарантия">
             </div>
             <div class="service-slide-credit">
               <div class="description">
                 <h2>Кредит</h2>
                 <p>Залезть в долговую яму стало проще! <br> Кредитные консультанты придут вам на помощь.</p>
+                <img class="visually-hidden" src="img/services-kredit.png" width="465" height="285" alt="Кредит">
               </div>
-              <img src="img/services-kredit.png" width="465" height="285" alt="Кредит">
             </div>
           </div>
         </div>
