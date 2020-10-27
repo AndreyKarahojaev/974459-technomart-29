@@ -456,9 +456,8 @@ svg
 .slide-button:focus{
     border-radius: 50%;
     background-color: var(--basic-red);
-}
-
-.slide-btn:after {
+}   
+.slide-btn1 {
     content: "";
     top: 129px;
     left: 92%;
@@ -469,7 +468,7 @@ svg
     border-right: 3px solid var(--basiс-white);
     transform: rotate(45deg);
 }
-.slide-btn::before {
+.slide-btn2 {
     content: "";
     top: 129px;
     right: 91%;
@@ -593,13 +592,21 @@ svg
     border-left-color: var(--basic-red);
 }
 .catalog-item .action{
-    position: relative;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 164px;
     margin: 0 auto;
     margin-top: 38px;
-    width: 135px;
     display: none;
     color: var(--basiс-white);
 }
+/* .action{
+    /* position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 164px;
+} */ 
 .do-shopping {
     color: var(--basiс-white);
 }

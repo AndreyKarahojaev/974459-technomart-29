@@ -111,22 +111,23 @@
                 <div class="slide-1">
                   <h2 class="slide-title">Перфораторы</h2>
                   <p class="slide-text">Настоящие муржские игрушки</p>
-                  <a class="slide-btn" href="#"></a>
                 </div>
               </div>
               <div class="slider-item slide2 visually-hidden">
                 <div class="slide-2">
                   <h2 class="slide-title">Дрели</h2>
                   <p class="slide-text">Соседям на радость</p>
-                  <a class="slide-btn" href="#"></a>
                 </div>
               </div>
+              <a class="prew slide-btn1" onclick="plusSlides(-1)"></a>
+              <a class="next slide-btn2" onclick="plusSlides(1)"></a>
               <a class="button slider-button" href="#">Открыть каталог</a>
               <div class="slider-controls">
-                <button type="button" aria-label="Первый слайд"></button>
-                <button class="current" type="button" aria-label="Второй слайд"></button>
+                <button class="press current"type="button" aria-label="Первый слайд" onclick="currentSlide(1)"></button>
+                <button class="press" type="button" aria-label="Второй слайд" onclick="currentSlide(2)"></button>
               </div>
             </div>
+            <script src"../JavaScript.js"></script>
           </li>
           <li class="discount">
             <p class="features-text">Скидка 50%</p>
@@ -193,7 +194,7 @@
           </li>
           <li class="catalog-item">
             <div class="corner-ribbon"></div>
-            <div class="catalog-item-gallery-2 flex items-center justify-center">
+            <div class="catalog-item-gallery flex items-center justify-center">
               <img src="img/item-4.jpg" alt="Перфоратор BOSCH BFG 2000" style="max-width: 184px; max-height: 164px;">
             </div>
             <div class="action">
