@@ -119,8 +119,8 @@
               <a class="next slide-btn2" onclick="plusSlide()"></a>
               <a class="button slider-button" href="#">Открыть каталог</a>
               <div class="slider-controls">
-                <button class="slider-dot "type="button" aria-label="Первый слайд" onclick="currentSlide(1)"></button>
-                <button class="slider-dot" type="button" aria-label="Второй слайд" onclick="currentSlide(2)"></button>
+                <button class="current"type="button" aria-label="Первый слайд" onclick="currentSlide(1)"></button>
+                <button type="button" aria-label="Второй слайд" onclick="currentSlide(2)"></button>
               </div>
             </div>
           </li>
@@ -267,11 +267,11 @@
           <div class="services-block-slide flex items-center">
             <div class="row-services">
               <div class="shadow-servis"></div>
-              <button class="services-botton flex">Доставка</button>
-              <button class="services-botton flex">Гарантия</button>
-              <button class="services-botton flex">Кредит</button>
+              <button class="services-botton flex show act" onClick="layer(0)">Доставка</button>
+              <button class="services-botton flex show" onClick="layer(1)">Гарантия</button>
+              <button class="services-botton flex show" onClick="layer(2)">Кредит</button>
             </div>
-            <div class="service-slide-delivery">
+            <div class="service-slide-delivery act show">
               <div class="description">
                 <h2>Доставка</h2>
                 <p>Мы с удовольствием доставим ваш товар прямо
@@ -279,10 +279,9 @@
                   <br> Ведь мы неплохо заработаем,
                   <br> поднимая его на ваш на этаж!
                 </p>
-                <img class="visually-hidden" src="img/services-delivery.png" width="468" height="261" alt="Доставка">
               </div>
             </div>
-            <div class="service-slide-garant">
+            <div class="service-slide-garant show non">
               <div class="description">
                 <h2>Гарантия</h2>
                 <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного
@@ -291,14 +290,12 @@
                   <br> гарантии. Мы обменяем сгоревший товар на новый.
                   <br> Дом уж восстановите как-нибудь сами.
                 </p>
-                <img class="visually-hidden" src="img/services-garant.png" width="389" height="283" alt="Гарантия">
               </div>
             </div>
-            <div class="service-slide-credit">
+            <div class="service-slide-credit show non">
               <div class="description">
                 <h2>Кредит</h2>
                 <p>Залезть в долговую яму стало проще! <br> Кредитные консультанты придут вам на помощь.</p>
-                <img class="visually-hidden" src="img/services-kredit.png" width="465" height="285" alt="Кредит">
               </div>
             </div>
           </div>
@@ -332,6 +329,7 @@
             <a class="contacts-button button" href="#">Заблудились? Напишите нам!</a>
           </div>
         </div>
+
       </section>
     </main>
     <!-- Подвал сайта comments -->
@@ -420,6 +418,7 @@
       </div>
     </footer>
     <!-- модальные окна comments  -->
+    <!-- модальное окно пользователя  -->
     <div class="modal modal-content">
       <div class="modal-user">
         <form>
@@ -443,15 +442,16 @@
         </form>
         <button class="modal-close" type="button" aria-label="Закрыть"></button>
       </div>
+      <!-- модальное окна карты  -->
       <div class="modal-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
           width="927" height="437" allowfullscreen
           title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-
         <button class="modal-close" type="button" aria-label="Закрыть"></button>
       </div>
     </div>
+    <!-- модальные окна comments  -->
   </div>
   <script type="text/javascript" src="js/JavaScript.js"></script>
 </body>
