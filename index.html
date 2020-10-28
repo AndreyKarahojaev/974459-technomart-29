@@ -19,7 +19,7 @@
         <div class="container flex">
           <div class="header-logo flex">
             <a href="#" class="header-logo-link flex items-center justify-center height-full">
-              <img src="./img/logo-technomart.svg" alt="Логотип «Техномарт»" class="headre-logo-img">
+              <img src="./img/logo-technomart.svg" alt="Логотип «Техномарт»">
             </a>
           </div>
           <div class="header-search">
@@ -91,7 +91,7 @@
       <!-- Секция преимущества comments -->
       <section class="features container">
         <h2 class="visually-hidden">Преимущества</h2>
-        <ul class="features-catalog">
+        <ul class="features-catalog list-unstyled">
           <li class="materials">
             <div class="corner-ribbon"></div>
             <p class="features-text">Материалы</p>
@@ -108,26 +108,21 @@
           <li class="slider">
             <div class="slider-list">
               <div class="slider-item slide1">
-                <div class="slide-1">
                   <h2 class="slide-title">Перфораторы</h2>
                   <p class="slide-text">Настоящие муржские игрушки</p>
-                </div>
               </div>
-              <div class="slider-item slide2 visually-hidden">
-                <div class="slide-2">
+              <div class="slider-item slide2">
                   <h2 class="slide-title">Дрели</h2>
                   <p class="slide-text">Соседям на радость</p>
-                </div>
               </div>
-              <a class="prew slide-btn1" onclick="plusSlides(-1)"></a>
-              <a class="next slide-btn2" onclick="plusSlides(1)"></a>
+              <a class="prew slide-btn1" onclick="minusSlide()"></a>
+              <a class="next slide-btn2" onclick="plusSlide()"></a>
               <a class="button slider-button" href="#">Открыть каталог</a>
               <div class="slider-controls">
-                <button class="press current"type="button" aria-label="Первый слайд" onclick="currentSlide(1)"></button>
-                <button class="press" type="button" aria-label="Второй слайд" onclick="currentSlide(2)"></button>
+                <button class="slider-dot "type="button" aria-label="Первый слайд" onclick="currentSlide(1)"></button>
+                <button class="slider-dot" type="button" aria-label="Второй слайд" onclick="currentSlide(2)"></button>
               </div>
             </div>
-            <script src"../JavaScript.js"></script>
           </li>
           <li class="discount">
             <p class="features-text">Скидка 50%</p>
@@ -346,7 +341,7 @@
           <div class="footer-site-navigation">
             <div class="footer-logo flex">
               <a href="#" class="footer-logo-link flex items-center justify-center height-full">
-                <img src="./img/footer-logo.svg" alt="Логотип «Техномарт»" class="headre-logo-img">
+                <img src="./img/footer-logo.svg" alt="Логотип «Техномарт»">
               </a>
             </div>
             <ul class="footer-nav footer-list-one">
@@ -458,6 +453,7 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="js/JavaScript.js"></script>
 </body>
 
 </html>

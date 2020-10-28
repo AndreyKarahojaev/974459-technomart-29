@@ -1,38 +1,42 @@
+/* слайдер на главной странице - блок преимущества*/
 var slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n){
-	showSlides(slideIndex += n);
+/* показывает следующй слайд*/
+function plusSlide() {
+    showSlides(slideIndex += 1);
 }
 
-function currentSlide(n){
-	showSlides(slideIndex = n);
+/* показывает предыдущий слайд*/
+function minusSlide() {
+    showSlides(slideIndex -= 1);  
 }
 
-function showSlides(n){
-	var i;
-	var slides = document.getElementsByClassName("slider-list");
-	var dots = document.getElementsByClassName("press");
-	
-	if(n > slides.length){
-		slideIndex = 1;	
-	}	
-	if(n < 1){
-		slideIndex = slides.length;
-	}	
-	for(i=0; i < slides.length; i++){
-		slides[i].style.display = "none";
-	}	
-	for(i=0; i < dots.length; i++){
-		dots[i].className = dots[i].className.replace("active","");
-	}
-	slides[slideIndex-1].style.display = "block";
-	dots[slideIndex-1].className+= " active";	
+/* Устанавливает текущий слайд */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
 }
 
-function slideTime(n){
- n=1
- showSlides(slideIndex += n);
- }
- 
-setInterval(slideTime, 4000);﻿
+/* слайдер */
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slider-item");
+    var dots = document.getElementsByClassName("slider-dot");
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+
+
+    
