@@ -6,7 +6,7 @@
   <title>Главная — HTML Academy: Техномарт</title>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum&family=PT+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/reset.css">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -18,7 +18,7 @@
       <div class="header-top flex">
         <div class="container flex">
           <div class="header-logo flex">
-            <a href="#" class="header-logo-link flex items-center justify-center height-full">
+            <a href="index.html" class="header-logo-link flex items-center justify-center height-full">
               <img src="./img/logo-technomart.svg" alt="Логотип «Техномарт»">
             </a>
           </div>
@@ -108,19 +108,19 @@
           <li class="slider">
             <div class="slider-list">
               <div class="slider-item slide1">
-                  <h2 class="slide-title">Перфораторы</h2>
-                  <p class="slide-text">Настоящие муржские игрушки</p>
+                <h2 class="slide-title">Перфораторы</h2>
+                <p class="slide-text">Настоящие муржские игрушки</p>
               </div>
               <div class="slider-item slide2">
-                  <h2 class="slide-title">Дрели</h2>
-                  <p class="slide-text">Соседям на радость</p>
+                <h2 class="slide-title">Дрели</h2>
+                <p class="slide-text">Соседям на радость</p>
               </div>
               <a class="prew slide-btn1" onclick="minusSlide()"></a>
               <a class="next slide-btn2" onclick="plusSlide()"></a>
-              <a class="button slider-button" href="#">Открыть каталог</a>
+              <a class="button slider-button" href="catalog.html">Открыть каталог</a>
               <div class="slider-controls">
-                <button class="current"type="button" aria-label="Первый слайд" onclick="currentSlide(1)"></button>
-                <button type="button" aria-label="Второй слайд" onclick="currentSlide(2)"></button>
+                <button class="current" aria-label="Первый слайд"></button>
+                <button  aria-label="Второй слайд"></button>
               </div>
             </div>
           </li>
@@ -265,39 +265,36 @@
               <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           </div>
           <div class="services-block-slide flex items-center">
-            <div class="row-services">
-              <div class="shadow-servis"></div>
-              <button class="services-botton flex show act" onClick="layer(0)">Доставка</button>
-              <button class="services-botton flex show" onClick="layer(1)">Гарантия</button>
-              <button class="services-botton flex show" onClick="layer(2)">Кредит</button>
-            </div>
-            <div class="service-slide-delivery act show">
-              <div class="description">
+            <ul class="services-control-list">
+              <li class="shadow-servis"></li>
+              <li><a class="services-bottom select" href="#delivery">Доставка</a></li>
+              <li><a class="services-bottom" href="#guaranty">Гарантия</a></li>
+              <li><a class="services-bottom" href="#credit">Кредит</a></li>
+            </ul>
+            <ul class="services-slide-list">
+              <li class="service-slide service-slide-delivery select" id="delivery">
                 <h2>Доставка</h2>
                 <p>Мы с удовольствием доставим ваш товар прямо
                   <br> к вашему подъезду совершенно бесплатно!
                   <br> Ведь мы неплохо заработаем,
                   <br> поднимая его на ваш на этаж!
                 </p>
-              </div>
-            </div>
-            <div class="service-slide-garant show non">
-              <div class="description">
+              </li>
+              <li class="service-slide service-slide-guaranty" id="guaranty">
                 <h2>Гарантия</h2>
-                <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного
+                <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара,
+                  спровоцированного
                   его
                   <br> возгаранием, вы всегда можете быть уверены в нашей
                   <br> гарантии. Мы обменяем сгоревший товар на новый.
                   <br> Дом уж восстановите как-нибудь сами.
                 </p>
-              </div>
-            </div>
-            <div class="service-slide-credit show non">
-              <div class="description">
+              </li>
+              <li class="service-slide service-slide-credit" id="credit">
                 <h2>Кредит</h2>
                 <p>Залезть в долговую яму стало проще! <br> Кредитные консультанты придут вам на помощь.</p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -323,12 +320,49 @@
           <div class="contacts flex">
             <h2 class="contacts-title">Контакты</h2>
             <p>Вы можете забрать товар сами,<br> завехав в наш офис:</p>
-            <a class="button-map">
-              <img src="img/map.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 10/8" width="300" height="158">
+            <a class="button-map" href="#">
+              <img src="img/map.png" width="300" height=158
+                alt="Карта с адресом офиса ул. Большая Конюшенная 19/8, Санкт-Петербург">
             </a>
             <a class="contacts-button button" href="#">Заблудились? Напишите нам!</a>
           </div>
         </div>
+        <!-- модальное окна карты  -->
+        <section class="modal modal-map">
+          <h3 class="visually-hidden">Карта</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+            width="927" height="437" allowfullscreen
+            title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+          <button class="modal-close" type="button" aria-label="Закрыть"></button>
+        </section>
+        <!-- модальное окно пользователя  -->
+        <section class="modal modal-user">
+          <h3 class="visually-hidden">Обратрная связь</h3>
+          <form>
+            <ul class="form-modal-window">
+              <li class="form-name">
+                <p><b>Ваше имя:</b></p>
+                <input type="text" name="name" placeholder="Имя Фамилия" required>
+              </li>
+              <li class="modal-mail">
+                <p><b>Ваш e-mail:</b></p>
+                <input type="email" name="email" placeholder="email@example.com" required>
+              </li>
+              <li class="modal-text">
+                <p><b>Текст письма:</b></p>
+                <input type="text" name="text" placeholder="В свободной форме" required>
+              </li>
+              <li class="form-sub"><input name="sub" type="submit" value="ОТПРАВИТЬ">
+                <div class="modal-footer"></div>
+              </li>
+            </ul>
+            
+          </form>
+          <button class="modal-close-user" type="button" aria-label="Закрыть"></button>
+        </section>
+        <!-- модальные окна comments  -->
+      <!-- модальные окна comments  -->
 
       </section>
     </main>
@@ -338,7 +372,7 @@
         <div class="page-footer-top">
           <div class="footer-site-navigation">
             <div class="footer-logo flex">
-              <a href="#" class="footer-logo-link flex items-center justify-center height-full">
+              <a href="index.html" class="footer-logo-link flex items-center justify-center height-full">
                 <img src="./img/footer-logo.svg" alt="Логотип «Техномарт»">
               </a>
             </div>
@@ -351,9 +385,7 @@
             </ul>
           </div>
           <div class="footer-site-navigation">
-            <div class="footer-text">
-              <p class="address-phone">г. Санкт-Петербург, ул. Б. Конюшенная, д. 10/8 <br> +7 (812) 555-05-55</p>
-            </div>
+            <p class="address-phone">г. Санкт-Петербург, ул. Б. Конюшенная, д. 10/8 <br> +7 (812) 555-05-55</p>
             <ul class="footer-nav footer-list-two">
               <li><a href="#">Материалы</a></li>
               <li><a href="#">Техника</a></li>
@@ -409,7 +441,7 @@
                   <a class="mail-link" href="#">mail@htmlacademy.ru</a>
                 </li>
                 <li>Разработано -
-                  <a class="dev-link" href="#">htmlacademy.ru</a>
+                  <a class="dev-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
                 </li>
               </ul>
             </div>
@@ -417,43 +449,8 @@
         </div>
       </div>
     </footer>
-    <!-- модальные окна comments  -->
-    <!-- модальное окно пользователя  -->
-    <div class="modal modal-content">
-      <div class="modal-user">
-        <form>
-          <ul class="form-modal-window">
-            <li class="form-name">
-              <p><b>Ваше имя:</b></p>
-              <input type="text" name="name" placeholder="Имя Фамилия" required>
-            </li>
-            <li class="modal-mail">
-              <p><b>Ваше e-mail::</b></p>
-              <input type="email" name="email" placeholder="email@example.com" required>
-            </li>
-            <li class="modal-text">
-              <p><b>Текст письма:</b></p>
-              <input type="text" name="text" placeholder="В свободной форме" required>
-            </li>
-            <li class="form-sub"><input name="sub" type="submit" value="ОТПРАВИТЬ">
-              <div class="modal-footer"></div>
-            </li>
-          </ul>
-        </form>
-        <button class="modal-close" type="button" aria-label="Закрыть"></button>
-      </div>
-      <!-- модальное окна карты  -->
-      <div class="modal-map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
-          width="927" height="437" allowfullscreen
-          title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-        <button class="modal-close" type="button" aria-label="Закрыть"></button>
-      </div>
-    </div>
-    <!-- модальные окна comments  -->
   </div>
-  <script type="text/javascript" src="js/JavaScript.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
