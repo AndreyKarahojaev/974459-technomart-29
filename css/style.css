@@ -149,7 +149,6 @@
     font-size: 18px;
     background: transparent;
     color: #000000;
-    outline: none;
     border: 0;
     max-width: 150px;
 }
@@ -349,7 +348,7 @@
 Блок преимущества 
 */
 .main {
-	flex-direction: column;
+    flex-direction: column;
 }
 
 .features {
@@ -1471,22 +1470,44 @@
 Страница. 
 Каталог  
 */
+
+
+.main-content fieldset{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 220px 700px;
+    grid-template-rows: 38px 1fr;
+    gap: 0px 20px;
+    grid-template-areas:
+        ". ."
+        ". .";
+}
+/* Контент страницы каталога */
+
+/* Хлебные крошки */
 .catalog-title {
     flex-wrap: wrap;
     margin: 0 auto ;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    
 }
+
 .breadcrumbs {
     position: relative;
-    padding: 0;
+    padding: 20px 0;
     margin: 0;
 }
+
 .icon-home {
     position: absolute;
     top: 1px;
     padding-right: 45px;
 }
+
 .icon-home::after {
     content: "";
     top: 6px;
@@ -1498,20 +1519,26 @@
     transform: rotate(45deg);
     margin-left: 15px;
 }
+
 .breadcrumbs a {
-    font-size: 0.722rem;
+    font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
     text-decoration: none;
     color: #000000
 }
+
 .breadcrumbs li {
     position: relative;
     padding: 0px 17px 0 36px;
-    left: 15px;
     text-decoration: none;
-    outline: none;
 }
+
+.breadcrumbs li:first-child {
+    padding: 0px 17px 0 0;
+    text-decoration: none;
+}
+
 .breadcrumbs li:after {
     content: "";
     top: 7px;
@@ -1523,14 +1550,19 @@
     transform: rotate(45deg);
     margin-left: 17px;
 }
+
 .breadcrumbs li:last-child:after {
     content: none;
 }
+
 .breadcrumbs li:first-child:after {
     content: none;
-}     
+} 
+   
+/* Хлебные крошки */
 
-.Product  h2{
+/* Основные классы центрального контекта */
+.Product  h2 {
     width: 100%;
     font-size: 30px;
     line-height: 30px;
@@ -1538,25 +1570,22 @@
     color: #32425C;
     padding: 29px 30px 29px 30px;
     background-color: #F2F6F8;
+    margin: 0;
+    margin-bottom: 20px;
 }
-.filtres {
-    width: 220px;
-    /* flex-basis: 220px; */
-    margin-top: 7px;
-    margin-right: 20px;
-    
-}
-.filtres h3{
+
+.title-text  h3{
     font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 13px;
     line-height: 18px;
+    font-weight: normal;
     text-transform: uppercase;
     color: #000000; 
     padding: 10px  0px 10px 20px;
+    margin: 0;
     background: #F7F3EC;
 }
+
 .catalog-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1565,49 +1594,36 @@
     list-style-type:none;
     padding: 0;
 }
-.aside {
-    width: 100%;
-    background-color: var(--basic-background);
-}
-.about-product p{
-    font-family: PT Sans;
-    font-size: 13px;
-    line-height: 24px;
-    padding-bottom: 68px;
-}
-.about-product h2{
-    font-size: 30px;
-    line-height: 30px;
-    text-transform: uppercase;
-    padding-top: 64px;
-}
-.bread_crumb-bottum {
-    width: 100%;
-    flex-wrap: wrap;
-}
 
-/*фильтр цены*/
+
+
+/*фильтр цены - ползунок*/
 .range-filter {
 	width: 220px;
 }
+
 .range-controls{
     position: relative;
 	height: 80px;
 	background:  #F7F3EC;
-	padding: 0 20px;
+    padding: 0 20px;
+    margin-top: 9px;
 	margin-bottom: 15px;
 	border-radius: 4px;
 }
+
 .range-controls .scale{
 	position: relative;
 	top: 39px;
 	height: 2px;
 	background:  #D7DCDE;
 }
+
 .scale .bar{
 	height: 2px;
 	background: #00ca74;
 }
+
 .range-controls .toggle{
 	position: absolute;
 	top: 30px;
@@ -1624,130 +1640,131 @@
 .range-controls .max-toggle{
 	left: 145px;
 }
+
 .price-controls input{
 	text-align: center;
 	width: 95px;
 	height: 38px;
 	background: #f7f3ec;
-	padding: 10px;
+    padding: 10px;
+    margin-bottom: 25px;
 	border: none;
 	border-radius: 4px;
-	outline: none;
 }
+
 .price-controls .min-price{
     margin-right: 5px;
 }
+
 .price-controls .max-price{
 	margin-left: 5px;
 }
 
-/*фильтры каталога*/
-.content-left-title {
-    text-transform: uppercase;
-    font-family: PT Sans;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 30px;
-    color: #000000;
-}
-.filter-search {
-    font-family: PT Sans;
-    font-size: 0.833rem;
-    line-height: 19px;
-    text-transform: uppercase;
-    color: #000000;
-}
-/*сортировка каталога*/
+
+
+/*сортировка каталога центральный фильтр*/
 .content-right-filter {
     position: relative;
-    background: #f7f3ec;
+    height: 38px;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 5px;
-	margin-bottom: 20px;
     border-radius: 4px;
 }
+
 .content-right-filter h3{
-    font-size: 0.722rem;
+    font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
-    /* font-weight: bold; */
     margin: 0;
-    margin-right: 140px;
+    margin-right: 75px;
     margin-left: 20px;
 }
-.content-right-filter a{
-	font-size: 0.72rem;
-	line-height: 18px;
+
+.right-filter a{
+	font-size: 13px;
+    line-height: 18px;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #c4c1bb;
 	margin-left: 65px;
-	border-bottom: 1px dotted var(--basiс-red);
+	border-bottom: 1px dotted var(--basic-red);
 }
-.content-right-filter a:hover{
+
+.right-filter a:hover{
     color: #000000;
-    border-bottom: 1px solid var(--basiс-red);
+    border-bottom: 1px solid var(--basic-red);
 }
-.content-right-filter .active {
+
+.right-filter .active {
     color: var(--basic-red);
-    background-color: var(--basiс-greylight);
+    border: none;
 }
+
 .filter-btn {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     position: relative;
-    left: 60px;
+    left: 90px;
     width: 43px;
 }
+
 .filter-btn-top {
-    background-color: var(--basiс-greylight);
-    border-radius: 10px;
-    position: relative;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid var(--basiс-greylight);
 }
-.filter-btn-top::after {
-    content: '';
-    position: absolute;
-    right: 45px;
-    bottom: -20px;
-    border: 10px solid transparent;
-    border-top: 10px solid var(--basiс-greylight);
-}
+
 .filter-btn-bottom {
-    background-color: var(--basiс-greylight);
-    border-radius: 10px;
-    position: relative;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid var(--basiс-greylight);
 }
-.filter-btn-bottom::after {
-    content: '';
-    position: absolute;
-    right: 85px;
-    bottom: -17px;
-    border: 10px solid transparent;
-    border-bottom: 10px solid var(--basiс-greylight);
-}
+
+
+
+
+
 /* Левый фильтр */
+/*фильтры каталога с радио/чекбокс кнопками*/
+.content-left-title h3{
+    text-transform: uppercase;
+    font-family: PT Sans;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+    color: #000000;
+    padding-top: 15px;
+    margin: 0;
+}
+
+.filter-search {
+    font-family: PT Sans;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
 .content-left-filter {
     position: relative;
 }
-.btn-filter {
-    position: relative;
-    left: 38px;
-}
+
 .btn-filter-checkbox {
     padding: 5px 5px 5px 5px;
     margin-bottom: 20px;
 }
+
 .filter-search label {
     position: relative;
     display: block;
     cursor: pointer;
     user-select: none;
 }
-.filter-input-checkbox:hover + label,
-.filter-input-checkbox:focus + label {
+/* .filter-input-checkbox:focus + label {
   opacity: .4;
-}
+} Блокирован? */
 
 .filter-input-checkbox + label::before {
     content: "";
@@ -1760,6 +1777,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+
 .filter-input-checkbox:checked + label::after {
     content: "";
     position: absolute;
@@ -1771,6 +1789,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+
 .filter-input-radio + label::before {
     content: "";
     position: absolute;
@@ -1781,45 +1800,46 @@
     border: 4px solid var(--basiс-greylight);
     border-radius: 50%;
 }
+
 .filter-input-radio:checked + label::after {
     content: "";
     position: absolute;
-    left: -29.2px;
-    top: 4px;
-    width: 8px;
-    height: 8px;
+    left: -32px;
+    top: 1px;
+    width: 13px;
+    height: 13px;
     background-color: var(--basiс-greylight);
     border-radius: 50%;
 }
+
 .filter-show{
-    right: 37px;
-    /* left: 9px; */
-    position: relative;
     min-height: 38px;
     min-width: 220px;
     font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 13px;
     line-height: 18px;
+    text-transform: uppercase;
     background: #FFFFFF;
     border: 1px solid #E5E5E5;
-    box-sizing: border-box;
 }
+
 .filter-show:hover {
     border-color: #bdc6ca;
 }
+
 .filter-show:active {
     color: #ffffff;
-    background: var(--basiс-red);
-    border-color: var(--basiс-red);
+    background: var(--basic-red);
+    border-color: var(--basic-red);
 }
-/* Пагинация */
+
+/* нумерация страниц */
 .paginator{
     padding: 13px 0;
     margin-top: 30px;
     margin-bottom: 60px;
 }
+
 .paginator a{
     font-size: 12px;
     line-height: 18px;
@@ -1832,15 +1852,42 @@
     border: 1px solid #e5e5e5;
     border-radius: 3px;
 }
+
 .paginator a:hover{
     border-color: #bdc6ca;
 }
+
 .paginator a:active{
-    border-color: var(--basiс-red);
-}
-.paginator .active{
-    color: #ffffff;
-    background: var(--basiс-red);
-    border-color: var(--basiс-red);
+    border-color: var(--basic-red);
 }
 
+.paginator .active{
+    color: #ffffff;
+    background: var(--basic-red);
+    border-color: var(--basic-red);
+}
+
+/* Дополнительная информация */
+.aside {
+    width: 100%;
+    background-color: var(--basic-background);
+}
+
+.about-product p{
+    font-family: PT Sans;
+    font-size: 13px;
+    line-height: 24px;
+    padding-bottom: 68px;
+}
+
+.about-product h2{
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding-top: 64px;
+}
+
+.bread_crumb-bottum {
+    width: 100%;
+    flex-wrap: wrap;
+}
