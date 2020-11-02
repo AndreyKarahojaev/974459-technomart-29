@@ -353,26 +353,23 @@
 
 .nav-header {
     flex-wrap: wrap;
-}
-
-.header-navigaion-site ul {
     list-style: none;
     padding-left: 20px;
     margin: 0;
 }
 
-.header-navigaion-site a {
+.navigation-link {
     display: block;
     text-decoration: none;
     color: var(--basiс-white);
     padding: 16px 24px 20px 33px;
 }
 
-.header-navigaion-site a:hover{
+.navigation-link:hover{
     background: var(--basiс-greydark);
 }
 
-.header-navigaion-site a:active{
+.navigation-link:active{
     color: #a1a4a8;
     background: #1d2739;
 }
@@ -458,22 +455,22 @@
     background-position: 87% 55%;
 }
 
-.features-catalog p {
-    margin: 0;
-}
 
-.features-catalog .features-text { 
+.features-text { 
     display: flex;
     text-align: center;
     align-items: center;
+    position: relative;
+    top: 20px;
+    left: 23px;
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
     color: var(--basiс-white);
-    position: relative;
-    top: 20px;
-    left: 23px;
+    margin: 0;
+    
 }
+
 .features-menu-btn {
     font-size: 14px;
     line-height: 18px;
@@ -519,6 +516,7 @@
     text-transform: uppercase;
     color: #FFFFFF;
     padding: 24px 24px 5px 24px;
+    margin: 0;
 }
 
 .slide-text {
@@ -527,13 +525,6 @@
     line-height: 24px;
     color: #FFFFFF;
     padding-left: 24px;
-}
-
-.slider-item h2 {
-    margin: 0;
-}
-
-.slider-item p {
     margin: 0;
 }
 
@@ -760,8 +751,8 @@
     background-color: red;
 }
 
-.catalog-item .buy,
-.catalog-item .bookmark {
+.buy,
+.bookmark {
     display: block;
     width: 130px;
     font-size: 16px;
@@ -785,13 +776,13 @@
     background-position: 15px 7px;
 }
 
-.catalog-item .bookmark{
+.bookmark{
     color: var(--basiс-grey);
     background: var(--basiс-white);
     border-bottom-color:var(--basiс-green);;
 }
 
-.catalog-item  .buy:hover{
+.buy:hover{
     background: var(--basiс-greendark);
     border-color: var(--basiс-greendark);
     border-bottom-color: var(--special-greendark);
@@ -800,7 +791,7 @@
     background-position: 15px 7px;
 }
 
-.catalog-item .buy:active{
+.buy:active{
     background: #518534;
     border-color: #518534;
     background-image: url(../img/icon-cart-buy.svg);
@@ -808,11 +799,11 @@
     background-position: 15px 7px;
 }
 
-.catalog-item .bookmark:hover{
+.bookmark:hover{
     border-color: var(--basiс-grey);
 }
 
-.catalog-item .bookmark:active{
+.bookmark:active{
     opacity: 0.5;
 }
 
@@ -879,6 +870,7 @@
 /* Блок Сервис services */
 .services {
     padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
     background: var(--basic-background);
 }
@@ -890,7 +882,7 @@
 
 .services-title {
     width: 100%;
-    margin-bottom: 68px;
+    margin-bottom: 52px;
 }
 
 .services-block-title h2{
@@ -899,31 +891,6 @@
 
 .services-block-title p{
     margin: 0;
-}
-
-.services-block-title ul{
-    margin: 0;
-    padding: 0;
-}
-
-.services-control-list {
-    display: flex;
-    flex-direction: column;
-    list-style-type:none;
-    min-width: 240px;
-    position: relative;
-    bottom: 50px;
-}
-
-/* Полоска тени у кнопок */
-.shadow-servis {
-    position: absolute;
-    bottom: -45px;
-    width: 10px;
-    height: 279px;
-    left: 231px;
-    background-image: url(../img/box-shadow-servis.svg);
-    z-index: 1;
 }
 
 .services-block-slide p {
@@ -943,6 +910,34 @@
     font-size: 13px;
     line-height: 24px;
     padding-top: 25px;
+}
+
+.services-control-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type:none;
+    min-width: 240px;
+    position: relative;
+    bottom: 28px;
+    margin: 0;
+    padding: 0;
+}
+.services-slide-list {
+    position: relative;
+    top: 21px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Полоска тени у кнопок */
+.shadow-servis {
+    position: absolute;
+    bottom: -45px;
+    width: 10px;
+    height: 279px;
+    left: 231px;
+    background-image: url(../img/box-shadow-servis.svg);
+    z-index: 1;
 }
 
 /* Сервис кнопки */
@@ -1043,7 +1038,7 @@
 	justify-content: space-between;
 	align-items: stretch;
     align-content: center;
-    padding-bottom: 74px;
+    padding-bottom: 70px;
 }
 
 .about-company-title {
@@ -1058,7 +1053,7 @@
     font-size: 13px;
     line-height: 24px;
     margin: 0;
-    padding-top: 30px;
+    padding-top: 23px;
 }
 
 .contacts-title {
@@ -1082,7 +1077,7 @@
     margin: 0;
 }
 
-.example-list p{
+.example-text {
     font-size: 13px;  
 }
 
@@ -1106,7 +1101,7 @@
     background: #fb565a;
 }
 
-.contacts p {
+.contacts-text {
     margin:0;
 }
 
@@ -1175,57 +1170,45 @@
     color: var(--basic-background);
 }
 
-.footer-site-navigation .footer-nav{
+.footer-checklist {
     display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
     align-items: baseline;
+    position: relative;
+    top: 10px;
 }
 
-.footer-site-navigation a {
+.footer-navigation-link {
     font-size: 18px;
     line-height: 24px;
     color:var(--basic-background);
     text-decoration: none;
 }
 
-.footer-navigation a {
-    font-size: 18px;
-    line-height: 24px;
-    color: #FFDA96;
-    text-decoration: none;
-}
-
-.footer-navigation {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: baseline;
-}
 /* декорирование подвала навигации */
 
-.footer-nav { 
+.footer-checklist { 
     margin: 0;
 }
 
-.footer-nav li{ 
+.footer-checklist li{ 
     padding-right: 59px; 
 }
 
-.footer-nav li:last-child{ 
+.footer-checklist li:last-child{ 
     padding-right: 0px; 
 }
 
-.footer-list-two  a { 
+.footer-list a { 
     color: var(--special-ylellow); 
 }
 
-.footer-nav a:hover {
+.footer-checklist a:hover {
     text-decoration: underline; 
 }
 
-.footer-nav a:active {
+.footer-checklist a:active {
     opacity: 0.5;
 }
 
@@ -1958,18 +1941,21 @@
     background-color: var(--basic-background);
 }
 
-.about-product p {
+.about-product-title {
+    font-size: 29px;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding-top: 77px;
+    margin: 0px;
+}
+
+.about-product-text{
     font-family: PT Sans;
     font-size: 13px;
     line-height: 24px;
+    padding-top: 26px;
     padding-bottom: 68px;
-}
-
-.about-product h2 {
-    font-size: 30px;
-    line-height: 30px;
-    text-transform: uppercase;
-    padding-top: 64px;
+    margin: 0px;
 }
 
 .bread_crumb-bottum {
