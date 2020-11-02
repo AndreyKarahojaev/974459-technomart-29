@@ -93,7 +93,7 @@
     top: 0px;
     padding: 35px;
     z-index: 2;
-    background-image: url(../img/corner-ribbon.svg);
+    background-image: url("../img/corner-ribbon.svg");
     background-repeat: no-repeat;
 }
 /* скрытие элементов */
@@ -172,7 +172,7 @@
 
 .header-search:active { 
     background-color: var(--basiс-white);
-    background-image: url(../img/icon-search-active.svg);
+    background-image: url("../img/icon-search-active.svg");
     background-repeat: no-repeat;
     background-position: 14px 14px;
 }
@@ -530,13 +530,13 @@
 
 .slide1 {
     min-height: 266px;
-    background-image: url(../img/Perforator-slide.png);
+    background-image: url("../img/Perforator-slide.png");
     background-repeat: no-repeat;
 }
 
 .slide2 {
     min-height: 266px;
-    background-image: url(../img/Dreli-slide.png);
+    background-image: url("../img/Dreli-slide.png");
     background-repeat: no-repeat;
 }
 
@@ -626,8 +626,12 @@
 /* Популярные товары popular-products */
 
 .popular-products {
-    margin-top: 5px; 
+    margin-top: 9px;
     padding-bottom: 5px;
+}
+.products-button {
+    margin-right: 14px;
+    padding: 11px 24px 9px 24px;
 }
 
 .popular-section-title {
@@ -635,6 +639,7 @@
     margin: 0 0 0 30px;
     text-transform: uppercase;
     color: var(--basiс-grey);
+    letter-spacing: -1px;
 }
 
 .popular-title {
@@ -771,7 +776,7 @@
 }
 
 .buy {
-    background-image: url(../img/icon-cart-buy.svg);
+    background-image: url("../img/icon-cart-buy.svg");
     background-repeat: no-repeat;
     background-position: 15px 7px;
 }
@@ -786,7 +791,7 @@
     background: var(--basiс-greendark);
     border-color: var(--basiс-greendark);
     border-bottom-color: var(--special-greendark);
-    background-image: url(../img/icon-cart-buy.svg);
+    background-image: url("../img/icon-cart-buy.svg");
     background-repeat: no-repeat;
     background-position: 15px 7px;
 }
@@ -794,7 +799,7 @@
 .buy:active{
     background: #518534;
     border-color: #518534;
-    background-image: url(../img/icon-cart-buy.svg);
+    background-image: url("../img/icon-cart-buy.svg");
     background-repeat: no-repeat;
     background-position: 15px 7px;
 }
@@ -936,7 +941,7 @@
     width: 10px;
     height: 279px;
     left: 231px;
-    background-image: url(../img/box-shadow-servis.svg);
+    background-image: url("../img/box-shadow-servis.svg");
     z-index: 1;
 }
 
@@ -1046,14 +1051,15 @@
     line-height: 30px;
     text-transform: uppercase;
     color: #000000;
+    letter-spacing: -1px;
     margin: 0;
 }
 
 .aside-company p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 24px;
     margin: 0;
-    padding-top: 23px;
+    padding-top: 26px;
 }
 
 .contacts-title {
@@ -1073,7 +1079,7 @@
 .example-list {
     list-style: none;
     padding-left:0px ;
-    padding-bottom: 19px;
+    padding-bottom: 16px;
     margin: 0;
 }
 
@@ -1114,7 +1120,7 @@
 }
 
 .button-map {
-    padding-top: 30px;
+    padding-top: 27px;
 }
 
 .about-button {
@@ -1739,7 +1745,6 @@
     height: 38px;
     width: 100%;
     padding-top: 10px;
-    padding-bottom: 5px;
     border-radius: 4px;
 }
 
@@ -1904,28 +1909,32 @@
 /* нумерация страниц paginator */
 .paginator {
     padding: 13px 0;
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin-top: 48px;
+    margin-bottom: 50px;
 }
 
-.paginator a{
+.paginator-button{
     font-size: 12px;
     line-height: 18px;
     text-transform: uppercase;
     text-decoration: none;
     color: #000000;
     background: #ffffff;
-    padding: 13px 18px;
+    padding: 10px 15px;
     margin-right: 5px;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
 }
 
-.paginator a:hover {
+.paginator a:last-child {
+    padding: 10px 30px;
+}
+
+.paginator-button:hover {
     border-color: #bdc6ca;
 }
 
-.paginator a:active {
+.paginator-button:active {
     border-color: var(--basic-red);
 }
 
@@ -1940,12 +1949,14 @@
     width: 100%;
     background-color: var(--basic-background);
 }
+.about-product {
+    padding-top: 64px;
+}
 
 .about-product-title {
     font-size: 29px;
     line-height: 30px;
     text-transform: uppercase;
-    padding-top: 77px;
     margin: 0px;
 }
 
