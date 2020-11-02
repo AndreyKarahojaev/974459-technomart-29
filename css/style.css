@@ -201,7 +201,13 @@
 .user-bookmarks:active { 
     background: #161D29;
     opacity: 0.5;
-}
+} 
+
+/* .users-link:active {
+    background-color: var(--basic-red);
+    opacity: 1;
+} 
+Обязательные требования 3.2. */
 
 .user-cart:active {opacity: 0.5;}
 
@@ -226,6 +232,11 @@
     padding: 45px 0;
 }
 
+.info-header ul {
+    margin: 0px;
+    padding: 0px;
+}
+
 .info-text  {
     font-style: italic;
     font-size: 16px;
@@ -238,6 +249,7 @@
 
 .info-tel-block {
     width: 270px;
+    margin-left: 47px;
 } 
 
 .info-text-sity {
@@ -273,8 +285,10 @@
 */
 
 .user-block {
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    width: 300px;
     font-size: 21px;
     line-height: 21px;
 }
@@ -290,11 +304,11 @@
 
 .user-registration { 
     padding: 12px 24px 12px 24px; 
-    margin-left:10px;
     background-color:var(--basiс-white);
 }
 
 .user-login { 
+    margin-left: 20px;
     padding: 12px 27px 12px 19px;
     background-color:var(--basiс-white);
 
@@ -1488,7 +1502,35 @@
         ". .";
 }
 /* Контент страницы каталога */
-
+.user-name {
+    position: relative;
+    width: 299px;
+    text-align: center;
+    padding: 12px 24px 12px 24px; 
+    margin-left:10px;
+    background-color:var(--basiс-white);
+}
+.user-name a:after {
+    position: relative;
+    background-image: url(/img/icon-user.svg);
+    background-repeat: no-repeat;
+}
+.user-name a:before {
+    position: relative;
+    top: 0px;
+    background-image: url(/img/icon-login-user.svg);
+    background-repeat: no-repeat;
+}
+.my-order a{
+    font-family: Cuprum;
+    font-size: 16px;
+    line-height: 18px;
+    color: #32425C;
+    padding: 0px 15px;
+}
+.my-order a:first-child {
+    margin-left: 25px;
+}
 /* Хлебные крошки */
 .catalog-title {
     flex-wrap: wrap;
@@ -1890,4 +1932,89 @@
 .bread_crumb-bottum {
     width: 100%;
     flex-wrap: wrap;
+}
+/* Модальное окно корзины страницы каталога */
+.modal-basket {
+    display: none;
+    position: absolute;
+    left: 40%;
+    top: 25%;
+}
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 620px;
+    height: 280px;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+    background-color:var(--basiс-white);
+    box-shadow: inset 0px 7px 0px 0px rgba(255, 0, 0, 1);
+}
+
+.modal-basket-title {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: baseline;
+}
+
+.modal-basket-title svg{    
+    position: absolute;
+    left: 90px;
+}
+
+.modal-basket-title h3{
+    font-family: Cuprum;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+}
+.modal-form .button-basket{
+    position: relative;
+    font-family: Cuprum;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    border: 0px;
+}
+.basket-order,
+.next-order {
+    width: 192px;
+    height: 38px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    border: 0px;
+}
+.next-order{
+    margin-left: 10px;
+    background-color: var(--basiс-white);
+}
+.modal-close-basket {
+    position: absolute;
+    top: 11px;
+    right: -20px;
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.modal-close-basket::before,
+.modal-close-basket::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    width: 20px;
+    height: 5px;
+    background-color: var(--basic-red);
+}
+.modal-close-basket::before { transform: rotate(45deg); }
+
+.modal-close-basket::after { transform: rotate(-45deg); }
+
+.modal-show-basket {
+    display: block;
 }

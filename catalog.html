@@ -17,7 +17,7 @@
         <div class="container flex">
           <div class="header-logo flex">
             <a href="index.html" class="header-logo-link flex items-center justify-center height-full">
-              <img src="./img/logo-technomart.svg" alt="Логотип «Техномарт»">
+              <img src="./img/logo-technomart.svg" alt="Логотип «Техномарт»" width="106px" height="17px">
             </a>
           </div>
           <div class="header-search">
@@ -61,15 +61,16 @@
           </div>
           <p class="info-text-sity">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <div class="user-block flex">
-          <div class="user-login">
-            <img src="./img/icon-login.svg" alt="Вход">
-            <a href="#">Войти</a>
-          </div>
-          <div class="user-registration">
-            <a href="#">Регистрация</a>
-          </div>
-        </div>
+        <ul class="user-block flex">
+          <li class="user-name">
+            <a href="#">Равшан Джамшутович</a>
+          </li>
+          <li class="my-order">
+            <a href="#">Мои заказы</a>
+            <span>&#9679;</span>
+            <a href="#">Личный кабинет</a>
+          </li>
+        </ul>
       </div>
       <!-- Блок навигации comments -->
       <nav class="header-navigaion-site container flex">
@@ -193,7 +194,7 @@
              for="remember-7">Сетевые</label>
          </li>
        </ul>
-       <button class="filter-show">Показать</button>
+       <button class="filter-show" type="submit">Показать</button>
    </fieldset>
       </section>
       <!-- Фильтр слева -->
@@ -373,7 +374,7 @@
           <div class="footer-site-navigation">
             <div class="footer-logo flex">
               <a href="index.html" class="footer-logo-link flex items-center justify-center height-full">
-                <img src="./img/footer-logo.svg" alt="Логотип «Техномарт»">
+                <img src="./img/footer-logo.svg" alt="Логотип «Техномарт»" width="106px" height="17px">
               </a>
             </div>
             <ul class="footer-nav footer-list-one">
@@ -449,7 +450,26 @@
         </div>
       </div>
     </footer>
+    <!-- модальное окно -->
+    <section class="modal-basket">
+      <div class="modal-form">
+        <div class="modal-basket-title">
+          <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M33 66C51.2254 66 66 51.2254 66 33C66 14.7746 51.2254 0 33 0C14.7746 0 0 14.7746 0 33C0 51.2254 14.7746 66 33 66Z" fill="#63A63E"/>
+            <path d="M49.641 21.066C49.2498 20.6773 48.6181 20.6773 48.227 21.066L29.788 39.504C29.3968 39.8928 28.7651 39.8928 28.374 39.504L20.234 31.365C19.8428 30.9763 19.2111 30.9763 18.82 31.365L15.285 34.9C14.8962 35.2912 14.8962 35.9228 15.285 36.314L28.374 49.404C28.7651 49.7928 29.3968 49.7928 29.788 49.404L33.324 45.868L34.738 44.454L53.176 26.016C53.5647 25.6248 53.5647 24.9932 53.176 24.602L49.641 21.066Z" fill="white"/>
+          </svg>
+          <h3>Товар добавлен в корзину</h3>
+        </div>
+        <div class="button-basket">
+          <button class="basket-order button">Оформить заказ</button>
+          <button class="next-order">Продолжить Покупки</button>
+        </div>
+        <div class="modal-footer"></div>
+        <button class="modal-close-basket" type="button" aria-label="Закрыть"></button>
+      </div>
+    </section>
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

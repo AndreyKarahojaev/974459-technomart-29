@@ -36,8 +36,6 @@ function showSlides(n) {
 
 // Слайдер сервис
 
-
-
 const services = document.querySelector(".services");
 const servicesControlList = services.querySelector(".services-control-list");
 const servicesSlideList = services.querySelector(".services-slide-list");
@@ -187,6 +185,33 @@ if (document.querySelector(".contacts-button")) {
       evt.preventDefault();
       if (userPopup.classList.contains("modal-show-user")) {
           userPopup.classList.remove("modal-show-user");
+      }
+      }
+  });
+}
+// Всплывающие окно на странице каталога
+if (document.querySelectorAll(".buy")) {
+  var basketLink = document.querySelector(".buy");
+  var basketPopup = document.querySelector(".modal-basket");
+  var basketClose = basketPopup.querySelector(".modal-close-basket");
+
+  basketLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      basketPopup.classList.add("modal-basket");
+      basketPopup.classList.remove("modal-show-basket");
+  });
+
+  basketClose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      basketPopup.classList.remove("modal-show-basket");
+      basketPopup.classList.add("modal-basket");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (basketPopup.classList.contains("modal-show-basket")) {
+        basketPopup.classList.remove("modal-show-basket");
       }
       }
   });
