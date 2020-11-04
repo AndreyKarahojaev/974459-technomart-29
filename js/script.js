@@ -28,11 +28,12 @@ function showSlides(n) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("active", "");
+        dots[i].className = dots[i].className.replace("current", "");
     }
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += "active";
+    dots[slideIndex - 1].className += "current";
 }
+
 // Слайдер сервис
 
 const services = document.querySelector(".services");
@@ -188,16 +189,17 @@ if (document.querySelector(".contacts-button")) {
       }
   });
 }
+
 // Всплывающие окно на странице каталога
-if (document.querySelectorAll(".buy")) {
+if (document.querySelector(".buy")) {
   var basketLink = document.querySelector(".buy");
   var basketPopup = document.querySelector(".modal-basket");
   var basketClose = basketPopup.querySelector(".modal-close-basket");
 
   basketLink.addEventListener("click", function (evt) {
       evt.preventDefault();
-      basketPopup.classList.add("modal-basket");
-      basketPopup.classList.remove("modal-show-basket");
+      basketPopup.classList.add("modal-show-basket");
+      basketPopup.classList.remove("modal-basket");
   });
 
   basketClose.addEventListener("click", function (evt) {
