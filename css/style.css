@@ -109,7 +109,6 @@
     right: 0;
     top: 0px;
     padding: 35px;
-    z-index: 2;
     background-image: url("../img/corner-ribbon.svg");
     background-repeat: no-repeat;
 }
@@ -245,7 +244,7 @@
 
 .user-bookmarks:active { 
     background: var(--special-darkpurpleblue);
-    opacity: 0.5;
+    opacity: .5;
 } 
 
 .users-link-active {
@@ -254,9 +253,13 @@
 } 
 /* Обязательные требования 3.2. */
 
-.user-cart:active {opacity: 0.5;}
+.user-cart:active {
+    opacity: .5;
+}
 
-.user-order { background: var(--basic-green);}
+.user-order { 
+    background: var(--basic-green);
+}
 
 .user-order:hover {
     color: var(--basic-white);
@@ -339,9 +342,17 @@
     margin: 0;
 }
 
-.user-img { opacity: 0.5;}
-.user-img:hover { opacity: 1;}
-.user-img:active{ opacity: 0.5;}
+.user-img { 
+    opacity: .5;
+}
+
+.user-img:hover {
+     opacity: 1;
+}
+
+.user-img:active{ 
+    opacity: .5;
+}
 
 .user-block a { 
     text-decoration: none;
@@ -640,7 +651,7 @@
     position: absolute;
     bottom: 55px;
     left: 294px;
-    z-index: 2;
+
     display: flex;
     width: 32px;
     justify-content: space-between;
@@ -672,6 +683,7 @@
 }
 
 .popular-section-title {
+    flex-wrap: wrap;
     font-size: 30px;
     margin: 0 0 0 30px;
     text-transform: uppercase;
@@ -846,7 +858,7 @@
 }
 
 .bookmark:active{
-    opacity: 0.5;
+    opacity: .5;
 }
 
 .do-shopping{
@@ -906,7 +918,7 @@
 
 .popular-list-item:active{
     box-shadow: 0 5px 15px 0px var(--special-greywetlist);
-    opacity: 0.5;
+    opacity: .5;
 }
 
 /* Блок Сервис services */
@@ -1047,6 +1059,8 @@
 }
 
 .service-slide p {
+    flex-wrap: wrap;
+    max-width: 300px;
     font-family: PT Sans;
     font-size: 13px;
     line-height: 24px;
@@ -1071,7 +1085,7 @@
 
 .aside-information {    
     position: relative;
-    padding-top: 70px;
+    padding-top: 50px;
 }
 
 .aside-company {
@@ -1099,18 +1113,25 @@
     padding-top: 26px;
 }
 
+.about-company {
+    flex-wrap: wrap;
+    max-width: 450px;
+    padding-top: 20px;
+}
+
+.contacts {
+	flex-direction: column;
+	flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
 .contacts-title {
     font-weight: normal;
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
     margin: 0;
-}
-
-.contacts {
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: flex-start;
 }
 
 .example-list {
@@ -1254,7 +1275,7 @@
 }
 
 .footer-checklist a:active {
-    opacity: 0.5;
+    opacity: .5;
 }
 
 .address-phone {
@@ -1375,7 +1396,7 @@
 .modal {
     position: absolute;
     top: 0;
-    z-index: 3;
+    z-index: 2;
     color: var(--basic-black);
     background-color: var(--basic-white);
 }
@@ -1566,6 +1587,8 @@
     border-bottom: 1px solid var(--basic-greylight);
 }
 
+
+
 /* Контент страницы каталога */
 
 .user-name {
@@ -1719,6 +1742,23 @@
     list-style-type:none;
     padding: 0;
 }
+
+/* Согласно стайлгайд'у отображение заблокированным элемента */
+
+.filter-input-disabled  {
+    opacity: .4;
+}
+
+/* Отсутствует в макете,но логичен в соответствии с 9 лайвом */
+/* .filter-input-checkbox:hover + label,
+.filter-input-checkbox:focus + label {
+  color: var(--special-reddark);
+}
+
+.filter-input-radio:hover + label,
+.filter-input-radio:focus + label {
+  color: var(--special-reddark);
+} */
 
 /*фильтр цены - "ползунок"*/
 
@@ -1887,9 +1927,6 @@
     cursor: pointer;
     user-select: none;
 }
-/* .filter-input-checkbox:focus + label {
-  opacity: .4;
-} Блокирован? */
 
 .filter-input-checkbox + label::before {
     content: "";
@@ -1902,6 +1939,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+
 .filter-input-checkbox:checked  + label::before {
     display: none;
 }
@@ -1940,16 +1978,7 @@
     border-radius: 50%;
 }
 
-/* Отсутствует в макете,но логичен в соответствии с 9 лайвом */
-.filter-input-checkbox:hover + label,
-.filter-input-checkbox:focus + label {
-  color: var(--special-reddark);
-}
 
-.filter-input-radio:hover + label,
-.filter-input-radio:focus + label {
-  color: var(--special-reddark);
-}
 
 .filter-show {
     min-height: 38px;
@@ -1958,6 +1987,7 @@
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
+    margin-top: 23px;
     background: var(--basic-white);
     border: 1px solid var(--special-greyicontwo);
 }

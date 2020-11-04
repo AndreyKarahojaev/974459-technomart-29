@@ -28,10 +28,10 @@ function showSlides(n) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("current", "");
+        dots[i].className = dots[i].className.replace("active", "");
     }
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += "current";
+    dots[slideIndex - 1].className += "active";
 }
 
 // Слайдер сервис
@@ -191,7 +191,7 @@ if (document.querySelector(".contacts-button")) {
 }
 
 // Всплывающие окно на странице каталога
-if (document.querySelector(".buy")) {
+if (document.querySelectorAll(".buy")) {
   var basketLink = document.querySelector(".buy");
   var basketPopup = document.querySelector(".modal-basket");
   var basketClose = basketPopup.querySelector(".modal-close-basket");
