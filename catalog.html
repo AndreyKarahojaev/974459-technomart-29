@@ -8,7 +8,6 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
 <body>
   <!-- Шапка -->
   <div class="wrapper">
@@ -122,6 +121,7 @@
       <div class="title-text"><h3>Фильтр:</h3></div>
       <!-- Фильтр по центру -->
       <section class="content-right-filter flex">
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
         <h3>Сортировать:</h3>
         <div class="right-filter">
           <a class="active" href="">По цене</a>
@@ -132,72 +132,74 @@
           <a class="filter-btn-top"></a>
           <a class="filter-btn-bottom"></a>
         </div>
+      </form>
       </section>
       <!-- Фильтр слева -->
       <section class="content-left-filter height-full">
+      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
    <!-- Ползунок -->
-   <fieldset class="filter-item">
-    <legend class="content-left-title">Цена:</legend>
-     <div class="range-filter">
-       <div class="range-controls">
-         <div class="scale">
-           <div style="width:70%" class="bar"></div>
-         </div>
-         <div class="toggle min-toggle"></div>
-         <div class="toggle max-toggle"></div>
-       </div>
-       <div class="price-controls">
-         <label class="min-price">
-           <input type="number" name="min-price" value="0">
-         </label>
-         <span>-</span>
-         <label class="max-price">
-           <input type="number" name="max-price" value="30000">
-         </label>
-       </div>
-     </div>
-   </fieldset>
-   <!-- Основной фильтр слева comments -->
-    <fieldset class="filter-item">
-         <legend class="content-left-title">Производители:</legend>
-       <form class="filter" method="get" action="https://echo.htmlacademy.ru"></form>
-        <ul class="filter-list">
-         <li class="filter-search btn-filter-checkbox">
-           <input class="visually-hidden filter-input-checkbox" type="checkbox" name="remember" id="remember-1">
-           <label for="remember-1">BOSH</label>
-         </li>
-         <li class="filter-search btn-filter-checkbox">
-           <input class="visually-hidden filter-input-checkbox" type="checkbox" name="remember" id="remember-2">
-           <label for="remember-2">ИНТЕРСКОЛ</label>
-         </li>
-         <li class="filter-search btn-filter-checkbox">
-           <input class="visually-hidden filter-input-checkbox" type="checkbox" name="remember" id="remember-3">
-           <label for="remember-3">MAKITA</label>
-         </li>
-         <li class="filter-search btn-filter-checkbox">
-           <input class="visually-hidden filter-input-checkbox" type="checkbox" name="remember" id="remember-4">
-           <label for="remember-4">DEWALT</label>
-         </li>
-         <li class="filter-search btn-filter-checkbox">
-           <input class="visually-hidden filter-input-checkbox" type="checkbox" name="remember" id="remember-5" disabled >
-           <label class="filter-input-disabled " for="remember-5">HITACHI</label>
-         </li>
-        </ul>    
+        <fieldset class="filter-item">
+          <legend class="content-left-title">Цена:</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div style="width:70%" class="bar"></div>
+              </div>
+              <div class="toggle min-toggle"></div>
+              <div class="toggle max-toggle"></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">
+                <input type="number" name="min-price" value="0">
+              </label>
+              <span>-</span>
+              <label class="max-price">
+                <input type="number" name="max-price" value="30000">
+              </label>
+            </div>
+          </div>
         </fieldset>
-       <fieldset class="filter-item">
-         <legend class="content-left-title">Питание:</legend>
-       <ul class="filter-search filter-list">
-         <li class="btn-filter-checkbox">
-           <input class="visually-hidden filter-input-radio" type="radio" name="remember" id="remember-6">
-           <label for="remember-6">Аккумуляторные</label>
-         </li>
-         <li class="btn-filter-checkbox">
-           <input class="visually-hidden filter-input-radio" type="radio" name="remember" id="remember-7">
-           <label for="remember-7">Сетевые</label>
-         </li>
-       </ul>
-       <button class="filter-show" type="submit">Показать</button>
-   </fieldset>
+   <!-- Основной фильтр слева comments -->
+        <fieldset class="filter-item">
+            <legend class="content-left-title">Производители:</legend>
+            <ul class="filter-list">
+            <li class="filter-search btn-filter-checkbox">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="remember" id="remember-1">
+              <label for="remember-1">BOSH</label>
+            </li>
+            <li class="filter-search btn-filter-checkbox">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="remember" id="remember-2">
+              <label for="remember-2">ИНТЕРСКОЛ</label>
+            </li>
+            <li class="filter-search btn-filter-checkbox">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="remember" id="remember-3">
+              <label for="remember-3">MAKITA</label>
+            </li>
+            <li class="filter-search btn-filter-checkbox">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="remember" id="remember-4">
+              <label for="remember-4">DEWALT</label>
+            </li>
+            <li class="filter-search btn-filter-checkbox">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="remember" id="remember-5" disabled >
+              <label class="filter-input-disabled " for="remember-5">HITACHI</label>
+            </li>
+            </ul>    
+        </fieldset>
+        <fieldset class="filter-item">
+            <legend class="content-left-title">Питание:</legend>
+          <ul class="filter-search filter-list">
+            <li class="btn-filter-checkbox">
+              <input class="visually-hidden filter-input-radio" type="radio" name="remember" id="remember-6">
+              <label for="remember-6">Аккумуляторные</label>
+            </li>
+            <li class="btn-filter-checkbox">
+              <input class="visually-hidden filter-input-radio" type="radio" name="remember" id="remember-7">
+              <label for="remember-7">Сетевые</label>
+            </li>
+          </ul>
+          <button class="filter-show" type="submit">Показать</button>
+        </fieldset>
+      </form>
       </section>
       <!-- Секция товары comments -->
       <section class="popular-products container">
@@ -452,6 +454,7 @@
     </footer>
     <!-- всплывающее модальное окно -->
     <section class="modal-basket">
+      <form method="get" action="https://echo.htmlacademy.ru">
       <div class="modal-form">
         <div class="modal-basket-title">
           <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -467,9 +470,9 @@
         <div class="modal-footer"></div>
         <button class="modal-close-basket" type="button" aria-label="Закрыть"></button>
       </div>
+      </form>
     </section>
   </div>
   <script src="js/script.catalog.js"></script>
 </body>
-
 </html>
