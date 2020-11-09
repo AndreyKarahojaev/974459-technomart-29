@@ -16,40 +16,20 @@
     <header class="page-header">
       <div class="header-top">
         <div class="container flex">
-          <div class="header-logo flex">
             <a href="index.html" class="header-logo-link">
               <img src="./img/logo-technomart.svg" alt="Логотип «Техномарт»" width="106" height="17">
             </a>
-          </div>
-          <div class="header-search">
-            <svg class="search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
-            </svg>
-              <form method="get" action="https://echo.htmlacademy.ru">
-                <input type="search" placeholder="Поиск" class="header-search-input"> 
+              <form class="header-search" method="get" action="https://echo.htmlacademy.ru">
+                <input type="search" placeholder="Поиск" class="header-search-input header-search"> 
               </form>
-          </div>
              <ul class="user-list">
-              <li class="users-item user-bookmarks"> <!--sit list elemtn -->
-                <a href="#" class="users-link">
-                  <svg class="users-icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="1">
-                    <path d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 
-                    6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z" fill="white"/>
-                    </g>
-                  </svg>
+              <li class="users-item"> 
+                <a href="#" class="users-link user-bookmarks">
                   Закладки: 0
                 </a>
               </li>
-              <li class="user-item user-cart">
-                <a href="#" class="users-link">
-                  <svg class="users-icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="1">
-                    <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white"/>
-                    <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
-                    <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
-                    </g>
-                  </svg>
+              <li class="users-item">
+                <a href="#" class="users-link user-cart">
                   Корзина: 0
                 </a>
               </li>
@@ -60,17 +40,10 @@
         </div>
       </div>
       <!-- Блок пользователя comments -->
-      <div class="info-header flex container">
-        <p class="info-text">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</p>
-        <div class="info-tel-block">
-          <div class="info-tel flex">
-            <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.572 19.485H14.631C10.502 18.997 7.47403 17.077 5.27203 14.621C3.06203 12.16 1.31803 8.99202 0.978027 4.72802V3.58402C1.05603 2.81002 1.43703 2.28002 1.87603 1.82702C2.42503 1.26602 3.25003 0.54402 4.00203 0.51902C4.55603 0.50102 5.50203 0.89902 5.88103 1.41802C6.21003 1.86402 6.38503 2.75702 6.53703 3.42102C6.69103 4.09202 7.04203 5.06402 6.94503 5.71002C6.79703 6.71702 5.45803 7.14402 5.06603 7.87602C6.37303 11.011 8.50903 13.315 11.359 14.907C12.074 14.515 12.705 13.335 13.691 13.312C14.05 13.303 14.509 13.49 14.875 13.598C15.277 13.719 15.625 13.873 15.979 14.006C16.575 14.23 17.627 14.527 17.983 15.027C18.348 15.54 18.553 16.383 18.473 16.906C18.309 17.947 16.594 19.103 15.572 19.485Z" fill="#B7BFC8"/>
-            </svg>
-            <a class="tel" href="tel:7812550555">+7 (812) 555-05-55</a>
-          </div>
-          <p class="info-text-sity">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        </div>
+      <div class="info-header">
+          <p class="info-text">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</p>
+          <a class="tel" href="tel:7812550555">+7 (812) 555-05-55</a>
+          <address class="info-text-sity">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         <ul class="user-block">
           <li class="user-login">
             <svg class="user-img" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +58,7 @@
         </ul>
       </div>
       <!-- Блок навигации comments -->
-      <nav class="header-navigaion-site container flex">
+      <nav class="header-navigaion-site container">
         <ul class="nav-header flex">
           <li><a class="navigation-link" href="index.html">Главная</a></li>
           <li><a class="navigation-link" href="#">Компания</a></li>
@@ -98,23 +71,22 @@
       </nav>
     </header>
     <!-- main основные разделы сайта comments -->
-    <main class="main flex items-center">
-      <!-- Секция преимущества comments -->
-      <section class="features container">
-        <h2 class="visually-hidden">Преимущества</h2>
-        <ul class="features-catalog list-unstyled">
-          <li class="materials">
-            <div class="corner-ribbon"></div>
-            <p class="features-text">Материалы</p>
-            <a class="features-menu-btn" href="#">На любой вкус</a>
+    <main>
+      <!-- Секция Ассортимент comments -->
+      <section class="assortment container">
+        <h2 class="visually-hidden">Ассортимент и сервис</h2>
+        <ul class="assortment-catalog">
+          <li class="assortment-item materials label-new">
+            <p class="assortment-text">Материалы</p>
+            <a class="assortment-menu-btn" href="#">На любой вкус</a>
           </li>
-          <li class="tools">
-            <p class="features-text">Инструмент</p>
-            <a class="features-menu-btn" href="#">На все случаи</a>
+          <li class="assortment-item tools">
+            <p class="assortment-text">Инструмент</p>
+            <a class="assortment-menu-btn" href="#">На все случаи</a>
           </li>
-          <li class="tech">
-            <p class="features-text">Техника</p>
-            <a class="features-menu-btn" href="#">Для стройки</a>
+          <li class="assortment-item tech">
+            <p class="assortment-text">Техника</p>
+            <a class="assortment-menu-btn" href="#">Для стройки</a>
           </li>
           <li class="slider">
             <div class="slider-list">
@@ -135,22 +107,19 @@
               </div>
             </div>
           </li>
-          <li class="discount">
-            <p class="features-text">Скидка 50%</p>
-            <a class="features-menu-btn" href="#">На 350 товаров</a>
+          <li class="assortment-item discount">
+            <p class="assortment-text">Скидка 50%</p>
+            <a class="assortment-menu-btn" href="#">На 350 товаров</a>
           </li>
-          <li class="delivery">
-            <p class="features-text">Доставка</p>
-            <a class="features-menu-btn" href="#">Бесплатно</a>
+          <li class="assortment-item delivery">
+            <p class="assortment-text">Доставка</p>
+            <a class="assortment-menu-btn" href="#">Бесплатно</a>
           </li>
         </ul>
       </section>
       <!-- Секция популярные продукты comments -->
       <section class="popular-products container">
-        <div class="popular-title">
-          <h2 class="popular-section-title">Популярные товары:</h2>
-          <a class="button products-button" href="#">Все популярные товары</a>
-        </div>
+          <h2 class="popular-title">Популярные товары:</h2>
         <ul class="popular-catalog-list">
           <li class="catalog-item"> 
             <div class="catalog-item-gallery">
@@ -167,7 +136,7 @@
             </div>
           </li>
           <li class="catalog-item">
-            <div class="corner-ribbon"></div>
+            <div class="label-new"></div>
             <div class="catalog-item-gallery">
               <img src="img/item-2.jpg" alt="Перфоратор BOSCH BFG 3000" style="max-width: 184px; max-height: 164px;">
             </div>
@@ -196,7 +165,7 @@
             </div>
           </li>
           <li class="catalog-item">
-            <div class="corner-ribbon"></div>
+            <div class="label-new"></div>
             <div class="catalog-item-gallery">
               <img src="img/item-4.jpg" alt="Перфоратор BOSCH BFG 2000" style="max-width: 184px; max-height: 164px;">
             </div>
@@ -211,14 +180,11 @@
             </div>
           </li>
         </ul>
+          <a class="button products-button" href="#">Все популярные товары</a>
       </section>
       <!-- Секция популярные бренды comments -->
-      <section class="popular-brands">
-        <div class="container">
-          <div class="popular-title">
-            <h2 class="popular-section-title">Популярные производители:</h2>
-            <a class="button popular-button" href="#">Все производители</a>
-          </div>
+      <section class="popular-brands container">
+            <h2 class="popular-title">Популярные производители:</h2>
           <ul class="popular-brands-list">
             <li class="popular-list-item">
               <a class="popular-brand-item" href="#">
@@ -261,16 +227,14 @@
               </a>
             </li>
           </ul>
-        </div>
+            <a class="button popular-button" href="#">Все производители</a>
       </section>
       <!-- секция сервис comments -->
       <section class="services">
-        <div class="services-block-title container flex">
-          <div class="services-title">
-            <h2>Сервисы</h2>
+        <div class="services-block-title container">
+            <h2 class="services-title">Сервисы</h2>
             <p class="services-text">Хороший интернет-магазин отличается от плохого не только ценами!<br>
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-          </div>
           <div class="services-block-slide">
             <ul class="services-control-list">
               <li><a class="services-bottom select" href="#delivery">Доставка</a></li>
@@ -280,24 +244,26 @@
             <ul class="services-slide-list">
                <li class="service-slide service-slide-delivery select" id="delivery"> <!--ограничить шириной и поставить неразрыные пробелы -->
                 <h2>Доставка</h2>
-                <p class="text-delivery services-text">Мы с удовольствием доставим ваш товар прямо <br>
-                  к вашему подъезду совершенно бесплатно! <br>
-                  Ведь мы неплохо заработаем, <br>
-                  поднимая его на ваш на этаж!  
+                <p class="text-delivery services-text">
+                  Мы&nbsp;с&nbsp;удовольствием доставим ваш товар прямо <br>
+                  к&nbsp;вашему подъезду совершенно бесплатно! <br>
+                  Ведь мы&nbsp;неплохо заработаем, <br>
+                  поднимая его на&nbsp;ваш на&nbsp;этаж!
                 </p>
               </li>
               <li class="service-slide service-slide-guaranty" id="guaranty">
                 <h2>Гарантия</h2>
-                <p class="text-guaranty services-text">Если купленный у нас товар поломается или заискрит,&#160;&#160;&#160;&#160;&#160;
-                  а также в случае пожара,спровоцированного его&#160;
-                  возгаранием, вы всегда можете быть уверены в нашей&#160;
-                  гарантии. Мы обменяем сгоревший товар на новый.&#160;&#160;&#160;&#160;
-                  Дом уж восстановите как-нибудь сами.&#160;
+                <p class="text-guaranty services-text">
+                  Если купленный у&nbsp;нас товар поломается или заискрит, 
+                  а&nbsp;также в&nbsp;случае пожара,спровоцированного его 
+                  возгаранием, вы&nbsp;всегда можете быть уверены в&nbsp;нашей 
+                  гарантии. Мы&nbsp;обменяем сгоревший товар на&nbsp;новый. 
+                  Дом уж&nbsp;восстановите как-нибудь сами.
                 </p>
               </li>
               <li class="service-slide service-slide-credit" id="credit">
                 <h2>Кредит</h2>
-                <p class="text-credit services-text">Залезть в долговую яму стало проще! &#160;&#160;&#160;&#160;&#160; Кредитные консультанты придут вам на помощь.</p>
+                <p class="text-credit services-text">Залезть в&nbsp;долговую яму стало проще! Кредитные консультанты придут вам на&nbsp;помощь.</p>
                 <a href="#" class="button button-credit">ОТПРАВИТЬ ЗАЯВКУ</a>
               </li>
             </ul>
@@ -309,7 +275,7 @@
         <div class=" aside-company">
           <div class="about-company">
             <h2 class="about-company-title">Компания &laquo;Техномарт&raquo;</h2>
-            <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для <br>ремонта и строительства не
+            <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для <br>ремонта и&nbsp;строительства не
               оставит равнодушными любителей сэкономить на <br> гастарбайтерах.</p>
             <ul class="example-list ">
               <li>
@@ -371,14 +337,11 @@
     </main>
     <!-- Подвал сайта comments -->
     <footer class="page-footer">
-      <div class="container">
-        <div class="page-footer-top">
+        <div class="page-footer-top container">
           <div class="footer-site-navigation">
-            <div class="footer-logo">
               <a href="index.html" class="footer-logo-link">
-                <img src="./img/footer-logo.svg" alt="Логотип «Техномарт»" width="106" height="17">
+                <img src="./img/footer-logo.svg" alt="Логотип «Техномарт»" width="138" height="23">
               </a>
-            </div>
             <ul class="footer-checklist">
               <li><a class="footer-navigation-link" href="#">Компания</a></li>
               <li><a class="footer-navigation-link" href="#">Новости</a></li>
@@ -397,7 +360,6 @@
             </ul>
           </div>
         </div>
-      </div>
       <!-- Подвал сайта с социальными кнопками comments  -->
       <div class="page-footer-bottom">
         <div class="container">
