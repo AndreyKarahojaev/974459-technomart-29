@@ -405,7 +405,12 @@
     font-size: 21px;
     line-height: 21px;
     list-style: none;
+    text-decoration: none;
     margin: 0;
+}
+.user-block a{
+    list-style: none;
+    text-decoration: none;
 }
 .user-login-link {
     text-decoration: none;
