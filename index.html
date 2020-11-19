@@ -42,6 +42,7 @@
       <!-- Блок пользователя comments -->
       <div class="info-header">
           <p class="info-text">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</p>
+          <!-- заголовок h1 -->
           <a class="tel" href="tel:7812550555">+7 (812) 555-05-55</a>
           <address class="info-text-sity">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           <!-- курсив? -->
@@ -57,7 +58,8 @@
       <!-- Блок навигации comments -->
       <nav class="header-navigaion-site container">
         <ul class="nav-header">
-          <li><a class="navigation-link" href="index.html">Главная</a></li>
+           <!-- убрать ссылку саму на себя-->
+          <li><a class="navigation-link" href="#">Главная</a></li>
           <li><a class="navigation-link" href="#">Компания</a></li>
           <li><a class="navigation-link" href="catalog.html">Каталог</a></li>
           <li><a class="navigation-link" href="#">Новости</a></li>
@@ -72,109 +74,96 @@
       <!-- Секция Ассортимент comments -->
       <section class="assortment container">
         <h2 class="visually-hidden">Ассортимент и сервис</h2>
+
         <ul class="assortment-catalog">
           <li class="assortment-item materials label-new">
-            <p class="assortment-text">Материалы</p>
+            <h3 class="assortment-text">Материалы</h3>
             <a class="assortment-menu-btn" href="#">На любой вкус</a>
           </li>
           <li class="assortment-item tools">
-            <p class="assortment-text">Инструмент</p>
+            <h3 class="assortment-text">Инструмент</h3>
             <a class="assortment-menu-btn" href="#">На все случаи</a>
           </li>
           <li class="assortment-item tech">
-            <p class="assortment-text">Техника</p>
+            <h3 class="assortment-text">Техника</h3>
             <a class="assortment-menu-btn" href="#">Для стройки</a>
           </li>
-          <li class="slider">
-            <div class="slider-list">
-              <div class="slider-item slide1">
-                <h2 class="slide-title">Перфораторы</h2>
-                <p class="slide-text">Настоящие муржские игрушки</p>
-              </div>
-              <div class="slider-item slide2">
-                <h2 class="slide-title">Дрели</h2>
-                <p class="slide-text">Соседям на радость</p>
-              </div>
-              <a class="prew slide-btn1" onclick="minusSlide()"></a>
-              <a class="next slide-btn2" onclick="plusSlide()"></a>
-              <a class="button slider-button" href="catalog.html">Открыть каталог</a>
-              <div class="slider-controls">
-                <button class="current" aria-label="Первый слайд"></button>
-                <button  aria-label="Второй слайд"></button>
-              </div>
-            </div>
-          </li>
+        </ul>
+
+        <ul class="assortment-slider">
+            <li class="slider-item slide1">
+              <h3 class="slide-title">Перфораторы</h3>
+              <p class="slide-text">Настоящие муржские игрушки</p>
+              <a class="button slider-button" href="catalog.html">Открыть Перфораторы</a>
+            </li>
+            <li class="slider-item slide2">
+              <h3 class="slide-title">Дрели</h3>
+              <p class="slide-text">Соседям на радость</p>
+              <a class="button slider-button" href="catalog.html">Открыть Дрели</a>
+            </li>
+            <li class="slider-controls">
+              <button class="slide-btn1" type="button" onclick="minusSlide()"></button>
+              <button class="slide-btn2" type="button" onclick="plusSlide()"></button>
+            </li>       
+        </ul>
+
+        <ul class="assortment-service">
           <li class="assortment-item discount">
-            <p class="assortment-text">Скидка 50%</p>
+            <h3 class="assortment-text">Скидка 50%</h3>
             <a class="assortment-menu-btn" href="#">На 350 товаров</a>
           </li>
           <li class="assortment-item delivery">
-            <p class="assortment-text">Доставка</p>
+            <h3 class="assortment-text">Доставка</h3>
             <a class="assortment-menu-btn" href="#">Бесплатно</a>
           </li>
         </ul>
       </section>
       <!-- Секция популярные продукты comments -->
       <section class="popular-products container">
-          <h2 class="popular-title">Популярные товары:</h2>
+        <h2 class="popular-title">Популярные товары:</h2>
         <ul class="popular-catalog-list">
           <li class="catalog-item"> 
-            <div class="catalog-item-gallery">
-              <img src="img/item-1.jpg" alt="Перфоратор BOSCH BFG 9000" style="max-width: 184px; max-height: 164px;">
-            </div>
+            <!-- убрать в конец -->
             <div class="action">
-              <a class="buy" href="#"><i class="do-shopping">Купить</i></a>
+              <a class="buy" href="#">Купить</a>
               <a class="bookmark" href="#">В закладки</a>
             </div>
-            <div class="basket-info">
-              <a class="item-name">Перфоратор BOSCH &#160;BFG 9000</a>
-              <span class="catalog-price">32500 Р.</span>
+              <img src="img/item-1.jpg" class="catalog-item-gallery" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
+              <h3 class="item-name">Перфоратор BOSCH &#160;BFG 9000</h3> 
+              <!-- явлется ли ссылкой в техзадании - нет-->
+              <p class="catalog-price">32500 Р.</p>
+              <!-- явлется ли ссылкой в техзадании - нет-->
               <a href="#" class="price-button">25500 Р.</a>
-            </div>
           </li>
-          <li class="catalog-item">
-            <div class="label-new"></div>
-            <div class="catalog-item-gallery">
-              <img src="img/item-2.jpg" alt="Перфоратор BOSCH BFG 3000" style="max-width: 184px; max-height: 164px;">
-            </div>
+          <li class="catalog-item label-new">      
             <div class="action">
-              <a class="buy" href="#"><i class="do-shopping">Купить</i></a>
+              <a class="buy" href="#">Купить</a>
               <a class="bookmark" href="#">В закладки</a>
             </div>
-            <div class="basket-info">
-              <a class="item-name">Перфоратор BOSCH &#160;BFG 3000</a>
-              <span class="catalog-price">22500 Р.</span>
+              <img  src="img/item-2.jpg" class="catalog-item-gallery" alt="Перфоратор BOSCH BFG 3000"  width="184" height="164">
+              <h3 class="item-name">Перфоратор BOSCH &#160;BFG 3000</h3>
+              <p class="catalog-price">22500 Р.</p>
               <a href="#" class="price-button">15500 Р.</a>
-            </div>
           </li>
           <li class="catalog-item">
-            <div class="catalog-item-gallery">
-              <img src="img/item-3.jpg" alt="Перфоратор BOSCH BFG 6000" style="max-width: 184px; max-height: 164px;">
-            </div>
             <div class="action">
-              <a class="buy" href="#"><i class="do-shopping">Купить</i></a>
+              <a class="buy" href="#">Купить</a>
               <a class="bookmark" href="#">В закладки</a>
             </div>
-            <div class="basket-info">
-              <a class="item-name">Перфоратор BOSCH &#160;BFG 6000</a>
-              <span class="catalog-price">30500 Р.</span>
+              <img src="img/item-3.jpg" class="catalog-item-gallery" alt="Перфоратор BOSCH BFG 6000" width="184" height="164">
+              <h3 class="item-name">Перфоратор BOSCH &#160;BFG 6000</h3>
+              <p class="catalog-price">30500 Р.</p>
               <a href="#" class="price-button">25500 Р.</a>
-            </div>
           </li>
-          <li class="catalog-item">
-            <div class="label-new"></div>
-            <div class="catalog-item-gallery">
-              <img src="img/item-4.jpg" alt="Перфоратор BOSCH BFG 2000" style="max-width: 184px; max-height: 164px;">
-            </div>
+          <li class="catalog-item label-new">
             <div class="action">
-              <a class="buy" href="#"><i class="do-shopping">Купить</i></a>
+              <a class="buy" href="#">Купить</a>
               <a class="bookmark" href="#">В закладки</a>
             </div>
-            <div class="basket-info">
-              <a class="item-name">Перфоратор BOSCH &#160;BFG 2000</a>
-              <span class="catalog-price catalog-price-hidden"></span>
+              <img src="img/item-4.jpg" class="catalog-item-gallery" alt="Перфоратор BOSCH BFG 2000" width="184" height="164">
+              <h3 class="item-name">Перфоратор BOSCH &#160;BFG 2000</h3>
+              <p class="catalog-price catalog-price-hidden"></p>
               <a href="#" class="price-button">12500 Р.</a>
-            </div>
           </li>
         </ul>
           <a class="button products-button" href="#">Все популярные товары</a>
@@ -240,7 +229,7 @@
             </ul>
             <ul class="services-slide-list">
                <li class="service-slide service-slide-delivery select" id="delivery"> <!--ограничить шириной и поставить неразрыные пробелы -->
-                <h2>Доставка</h2>
+                <h3>Доставка</h3>
                 <p class="text-delivery services-text">
                   Мы&nbsp;с&nbsp;удовольствием доставим ваш товар прямо <br>
                   к&nbsp;вашему подъезду совершенно бесплатно! <br>
@@ -249,7 +238,7 @@
                 </p>
               </li>
               <li class="service-slide service-slide-guaranty" id="guaranty">
-                <h2>Гарантия</h2>
+                <h3>Гарантия</h3>
                 <p class="text-guaranty services-text">
                   Если купленный у&nbsp;нас товар поломается или заискрит, 
                   а&nbsp;также в&nbsp;случае пожара,спровоцированного его 
@@ -259,7 +248,8 @@
                 </p>
               </li>
               <li class="service-slide service-slide-credit" id="credit">
-                <h2>Кредит</h2>
+                <h3>Кредит</h3>
+                <!-- h3 поставить -->
                 <p class="text-credit services-text">Залезть в&nbsp;долговую яму стало проще! Кредитные консультанты придут вам на&nbsp;помощь.</p>
                 <a href="#" class="button button-credit">ОТПРАВИТЬ ЗАЯВКУ</a>
               </li>
@@ -295,7 +285,6 @@
         </div>
         <!-- модальное окна карты  -->
         <section class="modal modal-map">
-          <h3 class="visually-hidden">Карта</h3>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
             width="927" height="437" allowfullscreen
@@ -305,7 +294,6 @@
         </section>
         <!-- модальное окно пользователя  -->
         <section class="modal modal-user">
-          <h3 class="visually-hidden">Обратрная связь</h3>
           <form method="get" action="https://echo.htmlacademy.ru">
             <ul class="form-modal-window">
               <li class="form-name">

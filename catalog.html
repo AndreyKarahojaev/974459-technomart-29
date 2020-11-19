@@ -14,9 +14,11 @@
       <div class="header-top">
         <div class="container flex">
             <a href="index.html" class="header-logo-link">
+              <!-- убрать ссылку на сау себя -->
               <img src="./img/logo-technomart.svg" alt="Логотип «Техномарт»" width="106" height="17">
             </a>
               <form class="header-search" method="get" action="https://echo.htmlacademy.ru">
+                <!-- поменять на сабмит button type submit скрыть кнопку визуал хиден-->
                 <input type="search" placeholder="Поиск" class="header-search-input header-search"> 
               </form>
              <ul class="user-list">
@@ -31,15 +33,18 @@
                 </a>
               </li>
               <li class="users-item user-order">
-                <a href="#" class="users-link">Оформить заказ</a>
+                <a href="#" class="users-link">
+                  Оформить заказ
+                </a>
               </li>
             </ul>
         </div>
       </div>
+      
       <!-- Блок пользователя comments -->
       <div class="info-header">
         <p class="info-text">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</p>
-        <a class="tel" href="tel:7812550555">+7 (812) 555-05-55</a>
+        <a class="tel" href="tel:+7812550555">+7 (812) 555-05-55</a>
         <address class="info-text-sity">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         <!-- курсив? -->
         <ul class="user-block">
@@ -68,9 +73,10 @@
     </div>
 
       <!-- Блок навигации comments comments -->
-      <nav class="header-navigaion-site container flex">
-        <ul class="nav-header flex">
+      <nav class="header-navigaion-site container">
+        <ul class="nav-header">
           <li><a class="navigation-link" href="index.html">Главная</a></li>
+          <!-- убрать ссылку саму на себя-->
           <li><a class="navigation-link" href="#">Компания</a></li>
           <li><a class="navigation-link" href="catalog.html">Каталог</a></li>
           <li><a class="navigation-link" href="#">Новости</a></li>
@@ -81,10 +87,10 @@
       </nav>
     </header>
     <!-- main основные разделы сайта comments -->
-    <main class="main flex ">
+    <main class="main">
       <!-- хлебные крошки comments -->
-      <section class="catalog-title container flex">
-        <ul class="breadcrumbs flex list-unstyled">
+      <section class="catalog-title container">
+        <ul class="breadcrumbs flex">
           <li>
             <a href="index.html" class="icon-home">
               <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
